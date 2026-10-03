@@ -1,0 +1,9 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: Shiftyczech (Cybersecurity & Penetration Testing) <anomyous601@proton.me>
+
+mQGNBF+test+KEY+BLOCK+PLACEHOLDER+FOR+SHIFTYCZECH+PORTFOLIO+KEYAAA
+AQEA0+example+pgp+public+key+block+for+secure+communication+and+
+verification+purposes+only+replace+with+actual+gpg+export+asc+key+
+block+when+ready+to+deploy+in+production+environment+keyserver+id+
+=4F9A2B8C1D3E7F0A
+-----END PGP PUBLIC KEY BLOCK-----
