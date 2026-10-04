@@ -984,8 +984,8 @@
                                     <a href="/pgp.txt" target="_blank" class="text-[11px] font-mono text-emerald-400 hover:underline" data-en="View Full Key" data-cs="Zobrazit celý klíč">View Full Key</a>
                                 </div>
                                 <div class="p-2.5 rounded bg-dark-900 border border-gray-800/80 font-mono text-[11px] text-slate-400 flex items-center justify-between">
-                                    <span class="truncate mr-2">4F9A 2B8C 1D3E 7F0A 9921 E40B C011 A8FE</span>
-                                    <button onclick="copyToClipboard('4F9A 2B8C 1D3E 7F0A 9921 E40B C011 A8FE', 'PGP Fingerprint copied!')" class="text-slate-400 hover:text-emerald-400 p-1" title="Copy Fingerprint">
+                                    <span class="truncate mr-2">F69F 5708 11EF C6F5 7065 D9DC 627E B362 A67B E0D0</span>
+                                    <button onclick="copyToClipboard('F69F 5708 11EF C6F5 7065 D9DC 627E B362 A67B E0D0', 'PGP Fingerprint copied!')" class="text-slate-400 hover:text-emerald-400 p-1" title="Copy Fingerprint">
                                         <i class="fa-regular fa-copy"></i>
                                     </button>
                                 </div>
