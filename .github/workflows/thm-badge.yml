@@ -1,0 +1,24 @@
+name: Refresh TryHackMe Badge
+
+on:
+  schedule:
+    - cron: '0 13 * * *' # Daily at 13:00 UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  refresh-badge:
+    # Note: Requires self-hosted runner (home server / PC) due to Vercel bot-protection on TryHackMe API
+    runs-on: self-hosted
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update TryHackMe Badge
+        uses: KeizerSec/Tryhackme-Badge@v1
+        with:
+          username: Zeroczech
+          theme: matrix
+          output_path: assets/thm_badge.svg
+          commit_message: 'chore: refresh TryHackMe badge [skip ci]'
