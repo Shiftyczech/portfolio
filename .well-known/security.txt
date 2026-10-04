@@ -4,3 +4,4 @@ Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en, cs
 Canonical: https://shiftyczech.github.io/portfolio/.well-known/security.txt
 Policy: https://shiftyczech.github.io/portfolio/
+Canonical: https://shiftyczech.github.io/.well-known/security.txt
