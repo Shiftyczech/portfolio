@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="cs" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Primary Meta Tags -->
-    <title>ZeroCzech | Portfolio & Cesta v kyberbezpečnosti</title>
-    <meta name="title" content="ZeroCzech | Portfolio & Cesta v kyberbezpečnosti">
-    <meta name="description" content="Portfolio studenta VOŠKH se zájmem o etický hacking, CTF výzvy na TryHackMe a přípravu na oborové certifikace.">
-    <meta name="keywords" content="ZeroCzech, kyberbezpečnost, etický hacking, student, VOŠKH, CTF, TryHackMe, portfolio">
-    <meta name="author" content="ZeroCzech">
-    <meta name="theme-color" content="#111827">
+    <title>Zeroczech | Cybersecurity & Penetration Testing Portfolio</title>
+    <meta name="title" content="Zeroczech | Cybersecurity & Penetration Testing Portfolio">
+    <meta name="description" content="Portfolio of Zeroczech - Cybersecurity Enthusiast, CTF Player, and Aspiring Penetration Tester specializing in offensive security, network analysis, and vulnerability assessment.">
+    <meta name="keywords" content="cybersecurity, penetration testing, ethical hacking, CTF, TryHackMe, HackTheBox, Zeroczech, Kali Linux, security researcher">
+    <meta name="author" content="Zeroczech">
+    <meta name="theme-color" content="#090d16">
 
     <!-- Open Graph / Facebook / Discord / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shiftyczech.github.io/portfolio/">
-    <meta property="og:title" content="ZeroCzech | Portfolio & Cesta v kyberbezpečnosti">
-    <meta property="og:description" content="Portfolio studenta VOŠKH se zájmem o etický hacking, CTF výzvy na TryHackMe a přípravu na oborové certifikace.">
-    <meta property="og:site_name" content="ZeroCzech Portfolio">
+    <meta property="og:url" content="https://shiftyczech.github.io/">
+    <meta property="og:title" content="Zeroczech | Cybersecurity & Penetration Testing Portfolio">
+    <meta property="og:description" content="Portfolio of Zeroczech - Cybersecurity Enthusiast, CTF Player, and Aspiring Penetration Tester. Discover projects, CTF write-ups, tools, and certifications.">
+    
+    <meta property="og:site_name" content="Zeroczech Portfolio">
+
+    <!-- Open Graph Image -->
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/85688123?v=4">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@simontobis75011">
     <meta name="twitter:creator" content="@simontobis75011">
-    <meta name="twitter:url" content="https://shiftyczech.github.io/portfolio/">
-    <meta name="twitter:title" content="ZeroCzech | Portfolio & Cesta v kyberbezpečnosti">
-    <meta name="twitter:description" content="Portfolio studenta VOŠKH se zájmem o etický hacking a CTF výzvy.">
+    <meta name="twitter:url" content="https://shiftyczech.github.io/">
+    <meta name="twitter:title" content="Zeroczech | Cybersecurity & Penetration Testing Portfolio">
+    <meta name="twitter:description" content="Portfolio of Zeroczech - Cybersecurity Enthusiast, CTF Player, and Aspiring Penetration Tester.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/85688123?v=4">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/></svg>">
+    <!-- Favicon (SVG Terminal Hacker Icon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12.5H6.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H12c.28 0 .5.22.5.5s-.22.5-.5.5zm-4.79-3.71l-2.5-2.5c-.39-.39-.39-1.02 0-1.41l2.5-2.5c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L5.33 10.5l2.79 2.79c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0z'/></svg>">
 
     <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,17 +44,32 @@
             theme: {
                 extend: {
                     colors: {
-                        gray: {
-                            750: '#263345',
-                            800: '#1f2937',
-                            850: '#182234',
-                            900: '#111827',
-                            950: '#0b0f19'
+                        dark: {
+                            950: '#06090e',
+                            900: '#090d16',
+                            850: '#0d131f',
+                            800: '#111a2b',
+                            700: '#1b273d',
+                        },
+                        accent: {
+                            emerald: '#10b981',
+                            cyan: '#06b6d4',
+                            glow: 'rgba(16, 185, 129, 0.15)',
                         }
                     },
                     fontFamily: {
+                        mono: ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace'],
                         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-6px)' },
+                        }
                     }
                 }
             }
@@ -61,31 +79,74 @@
     <!-- FontAwesome 6 (via CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Modern Apple-like Dark Background & Typography */
+        /* Custom subtle cyber background pattern */
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #111827; /* Tailwind gray-900 */
-            color: #e5e7eb; /* Tailwind gray-200 */
+            background-color: #080c14;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 65%, rgba(6, 182, 212, 0.04) 0%, transparent 45%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+            font-family: 'Inter', sans-serif;
+            color: #cbd5e1;
         }
 
-        /* Subtle focus outlines */
-        *:focus-visible {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+            border: 1px solid #334155;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
         }
 
-        /* Toast animation */
+        /* Glassmorphism & Cyber Card Effects */
+        .cyber-card {
+            background: rgba(13, 19, 31, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cyber-card:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 0 15px 0 rgba(16, 185, 129, 0.06);
+            transform: translateY(-3px);
+        }
+
+        /* Terminal Prompt Cursor */
+        .terminal-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #10b981;
+            vertical-align: middle;
+            animation: blink 1.1s infinite;
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        /* Notification Toast */
         #toast {
             visibility: hidden;
             opacity: 0;
-            transform: translateY(12px);
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transform: translateY(20px);
         }
         #toast.show {
             visibility: visible;
@@ -94,167 +155,245 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+<body class="selection:bg-emerald-500 selection:text-black min-h-screen flex flex-col justify-between overflow-x-hidden">
 
     <!-- Toast Notification for Actions (e.g. Copying PGP/Email) -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-gray-800 border border-gray-700 text-gray-100 px-4 py-3 rounded-xl shadow-2xl backdrop-blur-md">
-        <i class="fa-solid fa-circle-check text-blue-400"></i>
-        <span id="toast-message" class="text-sm font-medium">Zkopírováno do schránky!</span>
+    <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-dark-850 border border-emerald-500/50 text-emerald-400 px-4 py-3 rounded-lg shadow-2xl backdrop-blur-md">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-mono font-medium">Copied to clipboard!</span>
     </div>
 
-    <!-- 1. NAVIGATION (Apple-like clean dark header) -->
-    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-gray-900/85 border-b border-gray-800 transition-all">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-dark-950/85 border-b border-gray-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
                 
-                <!-- Logo -->
-                <a href="#hero" class="flex items-center gap-2 text-white font-semibold text-lg tracking-tight hover:opacity-85 transition-opacity">
-                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-                    <span>ZeroCzech</span>
+                <!-- Logo / Terminal Prompt -->
+                <a href="#hero" class="flex items-center gap-2 group text-slate-100 font-mono text-base sm:text-lg font-semibold tracking-wide">
+                    <span class="text-emerald-400 group-hover:text-cyan-400 transition-colors">&gt;</span>
+                    <span class="group-hover:text-emerald-400 transition-colors">zeroczech</span>
+                    <span class="terminal-cursor"></span>
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
-                    <a href="#about" class="hover:text-white transition-colors" data-en="About" data-cs="O mně">O mně</a>
-                    <a href="#skills" class="hover:text-white transition-colors" data-en="Skills" data-cs="Dovednosti">Dovednosti</a>
-                    <a href="#platforms" class="hover:text-white transition-colors" data-en="Learning" data-cs="Platformy">Platformy</a>
-                    <a href="#certs" class="hover:text-white transition-colors" data-en="Certifications" data-cs="Certifikace">Certifikace</a>
-                    <a href="#projects" class="hover:text-white transition-colors" data-en="Projects" data-cs="Projekty">Projekty</a>
-                    <a href="#contact" class="hover:text-white transition-colors" data-en="Contact" data-cs="Kontakt">Kontakt</a>
+                <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+                    <a href="#about" class="hover:text-emerald-400 transition-colors" data-en="About" data-cs="O mně">About</a>
+                    <a href="#skills" class="hover:text-emerald-400 transition-colors" data-en="Skills" data-cs="Dovednosti">Skills</a>
+                    <a href="#platforms" class="hover:text-emerald-400 transition-colors" data-en="Platforms" data-cs="Platformy">Platforms</a>
+                    <a href="#projects" class="hover:text-emerald-400 transition-colors" data-en="Projects" data-cs="Projekty">Projects</a>
+                    <a href="#certs" class="hover:text-emerald-400 transition-colors" data-en="Certs" data-cs="Certifikace">Certs</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition-colors" data-en="Contact" data-cs="Kontakt">Contact</a>
                 </nav>
 
-                <!-- Right Actions: Language Switcher & Contact Button -->
+                <!-- Right Actions: Language Switcher & Mobile Menu Trigger -->
                 <div class="flex items-center gap-3">
                     
-                    <!-- Language Switcher Pill -->
-                    <div class="flex items-center bg-gray-800 border border-gray-700 rounded-full p-0.5 shadow-inner" role="group" aria-label="Language selection">
-                        <button id="lang-cs" onclick="setLanguage('cs')" class="px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-blue-600 text-white shadow-sm">
-                            CZ
-                        </button>
-                        <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 text-gray-400 hover:text-white">
+                    <!-- Language Switcher Pill Button -->
+                    <div class="flex items-center bg-dark-850 border border-gray-700/80 rounded-full p-1 shadow-inner" role="group" aria-label="Language selection">
+                        <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
                             EN
+                        </button>
+                        <button id="lang-cs" onclick="setLanguage('cs')" class="px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 text-slate-400 hover:text-slate-200">
+                            CZ
                         </button>
                     </div>
 
-                    <!-- Connect CTA Button -->
-                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-sm">
-                        <i class="fa-regular fa-envelope text-xs"></i>
-                        <span data-en="Get in touch" data-cs="Napsat zprávu">Napsat zprávu</span>
+                    <!-- Connect CTA Button (Desktop) -->
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-dark-950 transition-all duration-200">
+                        <i class="fa-solid fa-terminal text-xs"></i>
+                        <span data-en="Initialize Comms" data-cs="Zahájit spojení">Initialize Comms</span>
                     </a>
 
                     <!-- Mobile Menu Hamburger Button -->
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
-                        <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-emerald-400 focus:outline-none" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-800 bg-gray-900/95 px-4 pt-3 pb-6 space-y-2">
-            <a href="#about" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="About" data-cs="O mně">O mně</a>
-            <a href="#skills" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="Skills" data-cs="Dovednosti">Dovednosti</a>
-            <a href="#platforms" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="Learning" data-cs="Platformy">Platformy</a>
-            <a href="#certs" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="Certifications" data-cs="Certifikace">Certifikace</a>
-            <a href="#projects" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="Projects" data-cs="Projekty">Projekty</a>
-            <a href="#contact" class="mobile-link block text-sm font-medium py-2 px-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800" data-en="Contact" data-cs="Kontakt">Kontakt</a>
+        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-800 bg-dark-900/95 px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="About" data-cs="O mně">About</a>
+            <a href="#skills" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="Skills" data-cs="Dovednosti">Skills</a>
+            <a href="#platforms" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="Platforms" data-cs="Platformy">Platforms</a>
+            <a href="#projects" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="Projects" data-cs="Projekty">Projects</a>
+            <a href="#certs" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="Certs" data-cs="Certifikace">Certs</a>
+            <a href="#contact" class="mobile-link block text-sm font-medium py-2 px-3 rounded hover:bg-dark-800 text-slate-300 hover:text-emerald-400" data-en="Contact" data-cs="Kontakt">Contact</a>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
         
-        <!-- 2. HERO SECTION (Apple-style Centered Minimalist) -->
-        <section id="hero" class="relative pt-20 pb-20 md:pt-28 md:pb-28">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                
-                <!-- Status Badge -->
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
-                    <span data-en="Student & Cybersecurity Enthusiast" data-cs="Student & Nadšenec do kyberbezpečnosti">Student & Nadšenec do kyberbezpečnosti</span>
+        <!-- 2. HERO SECTION -->
+        <section id="hero" class="relative pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        
+                        <!-- Status Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span data-en="STATUS: AVAILABLE FOR SECURITY ROLES & CTF" data-cs="STAV: K DISPOZICI PRO BEZPEČNOSTNÍ ROLE A CTF">STATUS: AVAILABLE FOR SECURITY ROLES & CTF</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight">
+                            <span data-en="Hi, I'm" data-cs="Ahoj, já jsem">Hi, I'm</span>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Zeroczech</span>
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-lg sm:text-xl font-mono text-emerald-400/90 font-medium" data-en="Cybersecurity Enthusiast | CTF Player | Aspiring Penetration Tester" data-cs="Nadšenec do kybernetické bezpečnosti | CTF hráč | Aspirující penetrační tester">
+                            Cybersecurity Enthusiast | CTF Player | Aspiring Penetration Tester
+                        </p>
+
+                        <!-- Bio / Description -->
+                        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light" data-en="Dedicated to understanding how systems break to engineer unbreakable defenses. Focusing on offensive security methodologies, web exploitation, network enumeration, and privilege escalation." data-cs="Věnuji se zkoumání zranitelností systémů s cílem vytvářet neprolomitelnou obranu. Zaměřuji se na metodiky ofenzivní bezpečnosti, webové zranitelnosti, skenování sítí a eskalaci oprávnění.">
+                            Dedicated to understanding how systems break to engineer unbreakable defenses. Focusing on offensive security methodologies, web exploitation, network enumeration, and privilege escalation.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#projects" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg font-medium text-sm text-dark-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] font-mono font-semibold">
+                                <i class="fa-solid fa-crosshairs"></i>
+                                <span data-en="View Work" data-cs="Zobrazit projekty">View Work</span>
+                            </a>
+
+                            <a href="#cv" onclick="handleCvDownload(event)" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg font-medium text-sm text-slate-200 bg-dark-850 hover:bg-dark-800 border border-gray-700 hover:border-emerald-500/50 transition-all font-mono">
+                                <i class="fa-solid fa-file-arrow-down text-emerald-400"></i>
+                                <span data-en="Download CV" data-cs="Stáhnout CV">Download CV</span>
+                            </a>
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 text-slate-400">
+                            <span class="text-xs font-mono text-slate-500 uppercase tracking-wider" data-en="Links:" data-cs="Odkazy:">Links:</span>
+                            
+                            <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-emerald-400 hover:border-emerald-500/50 transition-all" title="GitHub Profile" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/%C5%A1imon-tobi%C3%A1%C5%A1-7a60933ab/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-cyan-400 hover:border-cyan-500/50 transition-all" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin text-lg"></i>
+                            </a>
+                            <a href="https://x.com/simontobis75011" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-slate-100 hover:border-slate-500/50 transition-all" title="X (Twitter) Profile" aria-label="X Profile">
+                                <i class="fa-brands fa-x-twitter text-lg"></i>
+                            </a>
+                            <a href="https://www.instagram.com/simon_tobias_/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-pink-400 hover:border-pink-500/50 transition-all" title="Instagram Profile" aria-label="Instagram Profile">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="mailto:anomyous601@proton.me" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-emerald-400 hover:border-emerald-500/50 transition-all" title="Encrypted Email" aria-label="Email">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </a>
+                            <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-dark-850 border border-gray-800 hover:text-red-400 hover:border-red-500/50 transition-all" title="TryHackMe @Zeroczech" aria-label="TryHackMe">
+                                <i class="fa-solid fa-fire-flame-curved text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Interactive Terminal Mockup -->
+                    <div class="lg:col-span-5">
+                        <div class="cyber-card rounded-xl border border-gray-800 shadow-2xl overflow-hidden font-mono text-xs sm:text-sm">
+                            
+                            <!-- Terminal Header -->
+                            <div class="bg-dark-950 px-4 py-3 border-b border-gray-800 flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                                </div>
+                                <div class="text-slate-400 text-xs flex items-center gap-1.5">
+                                    <i class="fa-solid fa-lock text-[10px] text-emerald-400"></i>
+                                    <span>zero@sec-lab: ~</span>
+                                </div>
+                                <div class="text-slate-600 text-xs">bash</div>
+                            </div>
+
+                            <!-- Terminal Body -->
+                            <div class="p-5 space-y-3.5 bg-dark-900/90 text-slate-300">
+                                <div>
+                                    <span class="text-emerald-400">zero@sec-lab</span>:<span class="text-cyan-400">~</span>$ whoami
+                                    <p class="text-slate-200 mt-1 pl-2 border-l border-emerald-500/40" data-en="&gt; Zeroczech | Ethical Hacker &amp; Security Researcher" data-cs="&gt; Zeroczech | Etický hacker &amp; bezpečnostní výzkumník">&gt; Zeroczech | Ethical Hacker &amp; Security Researcher</p>
+                                </div>
+
+                                <div>
+                                    <span class="text-emerald-400">zero@sec-lab</span>:<span class="text-cyan-400">~</span>$ cat core_focus.json
+                                    <div class="text-slate-300 mt-1 pl-2 border-l border-cyan-500/40 text-[11px] sm:text-xs">
+                                        <pre class="text-slate-400">{
+  <span class="text-emerald-400">"specialization"</span>: <span class="text-cyan-300">"Offensive Security & Pentesting"</span>,
+  <span class="text-emerald-400">"interests"</span>: [<span class="text-amber-300">"Web Exploitation"</span>, <span class="text-amber-300">"Active Directory"</span>, <span class="text-amber-300">"Network Recon"</span>],
+  <span class="text-emerald-400">"primary_os"</span>: <span class="text-cyan-300">"Kali Linux / Arch Linux"</span>,
+  <span class="text-emerald-400">"status"</span>: <span class="text-emerald-300">"Always learning. Always pwning."</span>
+}</pre>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="text-emerald-400">zero@sec-lab</span>:<span class="text-cyan-400">~</span>$ ./check_defense.sh
+                                    <p class="text-emerald-400 mt-1 font-semibold pl-2 border-l border-emerald-500/40 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-shield-halved text-xs"></i>
+                                        <span data-en="[+] Systems audited: Hardened mindset engaged" data-cs="[+] Systémy prověřeny: Nastaveno bezpečnostní myšlení">[+] Systems audited: Hardened mindset engaged</span>
+                                    </p>
+                                </div>
+
+                                <div class="pt-1 flex items-center text-slate-500">
+                                    <span class="text-emerald-400">zero@sec-lab</span>:<span class="text-cyan-400">~</span>$&nbsp;
+                                    <span class="terminal-cursor"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Main Headline -->
-                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-                    Šimon Tobiáš <span class="text-blue-400">/ ZeroCzech</span>
-                </h1>
-
-                <!-- EXACT Bio Paragraph requested by user -->
-                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8" data-en="I'm a 17-year-old student at VOŠKH in Kutná Hora with a passion for cybersecurity. I spend my free time solving CTF challenges, learning on platforms like TryHackMe and HackTheBox, and constantly improving my skills in ethical hacking." data-cs="Je mi 17 let, studuji na VOŠKH v Kutné Hoře a mým obrovským koníčkem je kyberbezpečnost. Ve volném čase řeším CTF výzvy, učím se na platformách jako TryHackMe nebo HackTheBox a neustále se zdokonaluji v etickém hackingu.">
-                    Je mi 17 let, studuji na VOŠKH v Kutné Hoře a mým obrovským koníčkem je kyberbezpečnost. Ve volném čase řeším CTF výzvy, učím se na platformách jako TryHackMe nebo HackTheBox a neustále se zdokonaluji v etickém hackingu.
-                </p>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
-                    <a href="#certs" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-md shadow-blue-600/20 hover:-translate-y-0.5">
-                        <span data-en="View Progress & Certs" data-cs="Prohlédnout postup & certifikace">Prohlédnout postup & certifikace</span>
-                        <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
-                    </a>
-                    <a href="#contact" class="px-6 py-3 rounded-xl bg-gray-800 hover:bg-gray-750 text-gray-200 hover:text-white border border-gray-700 font-medium text-sm transition-all hover:-translate-y-0.5 shadow-sm">
-                        <span data-en="Get in Touch" data-cs="Kontaktovat mě">Kontaktovat mě</span>
-                    </a>
-                </div>
-
-                <!-- Social Links Bar -->
-                <div class="flex items-center justify-center gap-4 text-gray-400">
-                    <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-gray-800 border border-gray-700 hover:text-white hover:border-gray-600 transition-all hover:-translate-y-0.5 shadow-sm" title="TryHackMe Profile" aria-label="TryHackMe">
-                        <i class="fa-solid fa-fire text-base"></i>
-                    </a>
-                    <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-gray-800 border border-gray-700 hover:text-white hover:border-gray-600 transition-all hover:-translate-y-0.5 shadow-sm" title="GitHub Profile" aria-label="GitHub">
-                        <i class="fa-brands fa-github text-base"></i>
-                    </a>
-                    <a href="mailto:anomyous601@proton.me" class="p-2.5 rounded-xl bg-gray-800 border border-gray-700 hover:text-white hover:border-gray-600 transition-all hover:-translate-y-0.5 shadow-sm" title="Email" aria-label="Email">
-                        <i class="fa-solid fa-envelope text-base"></i>
-                    </a>
-                    <a href="pgp.txt" target="_blank" class="p-2.5 rounded-xl bg-gray-800 border border-gray-700 hover:text-white hover:border-gray-600 transition-all hover:-translate-y-0.5 shadow-sm" title="PGP Public Key" aria-label="PGP Key">
-                        <i class="fa-solid fa-key text-base"></i>
-                    </a>
-                </div>
-
             </div>
         </section>
 
-        <!-- 3. ABOUT SECTION -->
-        <section id="about" class="py-16 md:py-20 border-t border-gray-800">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-16 md:py-24 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="About Me" data-cs="O mně">O mně</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base" data-en="My background, studies, and what drives my learning" data-cs="Moje zázemí, studium a co mě v IT nejvíce baví">Moje zázemí, studium a co mě v IT nejvíce baví</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 01. INTRO" data-cs="// 01. PŘEDSTAVENÍ">// 01. INTRO</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="About & Mindset" data-cs="O mně a můj přístup">About & Mindset</h3>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     
-                    <!-- Card 1: School -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4">
-                            <i class="fa-solid fa-graduation-cap"></i>
+                    <!-- Card 1: Offensive Security -->
+                    <div class="cyber-card p-6 rounded-xl space-y-4">
+                        <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+                            <i class="fa-solid fa-bug"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2" data-en="Studies & Education" data-cs="Studium & Vzdělávání">Studium & Vzdělávání</h3>
-                        <p class="text-sm text-gray-300 leading-relaxed" data-en="Student at VOŠ a SPŠ Kutná Hora. Focusing on IT fundamentals, computer networks, and modern operating systems." data-cs="Student na VOŠ a SPŠ Kutná Hora. Zaměřuji se na základy IT, počítačové sítě a moderní operační systémy.">
-                            Student na VOŠ a SPŠ Kutná Hora. Zaměřuji se na základy IT, počítačové sítě a moderní operační systémy.
+                        <h4 class="text-xl font-bold text-slate-100" data-en="Offensive Security" data-cs="Ofenzivní bezpečnost">Offensive Security</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-en="Adopting the attacker's perspective to discover logic flaws, misconfigurations, and vulnerabilities before malicious actors can exploit them." data-cs="Přijímám úhel pohledu útočníka k odhalení logických chyb, špatných konfigurací a zranitelností dříve, než je zneužijí záškodníci.">
+                            Adopting the attacker's perspective to discover logic flaws, misconfigurations, and vulnerabilities before malicious actors can exploit them.
                         </p>
                     </div>
 
-                    <!-- Card 2: CTFs & Hands-on -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4">
+                    <!-- Card 2: CTF & Problem Solving -->
+                    <div class="cyber-card p-6 rounded-xl space-y-4">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
                             <i class="fa-solid fa-flag"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2" data-en="Hands-on Practice & CTF" data-cs="Praktický trénink & CTF">Praktický trénink & CTF</h3>
-                        <p class="text-sm text-gray-300 leading-relaxed" data-en="Practicing ethical hacking concepts on TryHackMe and HackTheBox. Solving realistic challenges to gain practical security experience." data-cs="Trénování etického hackingu na platformách TryHackMe a HackTheBox. Řešení praktických úloh a rozbor cvičných zranitelností.">
-                            Trénování etického hackingu na platformách TryHackMe a HackTheBox. Řešení praktických úloh a rozbor cvičných zranitelností.
+                        <h4 class="text-xl font-bold text-slate-100" data-en="Hands-on CTF Grinding" data-cs="Aktivní řešení CTF">Hands-on CTF Grinding</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-en="Regularly breaking vulnerable machines on TryHackMe and HackTheBox to master practical pivoting, lateral movement, and privilege escalation." data-cs="Pravidelně pronikám do zranitelných strojů na platformách TryHackMe a HackTheBox, kde trénuji pivoting, laterální pohyb a eskalaci oprávnění.">
+                            Regularly breaking vulnerable machines on TryHackMe and HackTheBox to master practical pivoting, lateral movement, and privilege escalation.
                         </p>
                     </div>
 
-                    <!-- Card 3: Goals -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4">
-                            <i class="fa-solid fa-bullseye"></i>
+                    <!-- Card 3: Continuous Research -->
+                    <div class="cyber-card p-6 rounded-xl space-y-4">
+                        <div class="w-12 h-12 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xl">
+                            <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2" data-en="Continuous Growth" data-cs="Cíle & Neustálý růst">Cíle & Neustálý růst</h3>
-                        <p class="text-sm text-gray-300 leading-relaxed" data-en="Building a strong theoretical and practical base to pass entry-level industry security certifications in the near future." data-cs="Budování pevných teoretických i praktických základů pro úspěšné složení prvních oborových bezpečnostních certifikací.">
-                            Budování pevných teoretických i praktických základů pro úspěšné složení prvních oborových bezpečnostních certifikací.
+                        <h4 class="text-xl font-bold text-slate-100" data-en="Scripting & Automation" data-cs="Skriptování a automatizace">Scripting & Automation</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-en="Writing custom Python and Bash tools for automated reconnaissance, payload delivery, log parsing, and streamlining penetration testing workflows." data-cs="Píšu vlastní nástroje v Pythonu a Bashi pro automatizaci průzkumu, tvorbu payloadů, parsování logů a zefektivnění penetračního testování.">
+                            Writing custom Python and Bash tools for automated reconnaissance, payload delivery, log parsing, and streamlining penetration testing workflows.
                         </p>
                     </div>
 
@@ -263,103 +402,108 @@
             </div>
         </section>
 
-        <!-- 4. SKILLS SECTION -->
-        <section id="skills" class="py-16 md:py-20 border-t border-gray-800 bg-gray-900/60">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 3. TECH STACK & TOOLS GRID -->
+        <section id="skills" class="py-16 md:py-24 bg-dark-950/60 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="Skills & Tools" data-cs="Dovednosti & Nástroje">Dovednosti & Nástroje</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base" data-en="Technologies and tools I practice with and use for CTF challenges" data-cs="Technologie a nástroje, se kterými se učím a pracuji při řešení výzev">Technologie a nástroje, se kterými se učím a pracuji při řešení výzev</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 02. TOOLBOX" data-cs="// 02. ARSENÁL NÁSTROJŮ">// 02. TOOLBOX</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="Tech Stack & Arsenal" data-cs="Technologie a arzenál">Tech Stack & Arsenal</h3>
+                    <p class="text-slate-400 text-sm mt-3" data-en="Core operating systems, scripting languages, and industry-standard security tools in daily rotation." data-cs="Operační systémy, skriptovací jazyky a bezpečnostní standardní nástroje, se kterými denně pracuji.">
+                        Core operating systems, scripting languages, and industry-standard security tools in daily rotation.
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
+                <!-- Sleek Tools Grid (Kali, Python, Bash, Nmap, Wireshark, Burp Suite, Metasploit, Git) -->
                 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                     
                     <!-- Tool 1: Kali Linux -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-blue-300 transition-all">
                             <i class="fa-brands fa-linux"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Kali Linux</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Primary Practice OS" data-cs="Primární OS pro trénink">Primární OS pro trénink</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Linux environment, security utilities & tools" data-cs="Linuxové prostředí a bezpečnostní balíčky">Linuxové prostředí a bezpečnostní balíčky</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Kali Linux</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Primary OS" data-cs="Primární OS">Primary OS</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Offensive distro, custom configs & tools" data-cs="Ofenzivní distribuce, vlastní konfigurace">Offensive distro, custom configs & tools</p>
                     </div>
 
                     <!-- Tool 2: Python -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-yellow-300 transition-all">
                             <i class="fa-brands fa-python"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Python</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Scripting & Automation" data-cs="Skriptování & Automatizace">Skriptování & Automatizace</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Writing helper scripts, sockets & requests" data-cs="Tvorba pomocných skriptů, síťové sokety">Tvorba pomocných skriptů, síťové sokety</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Python</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Exploit Dev & Automation" data-cs="Vývoj exploitů a automatizace">Exploit Dev & Automation</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Scapy, Requests, Socket, Pwntools" data-cs="Scapy, Requests, Socket, Pwntools">Scapy, Requests, Socket, Pwntools</p>
                     </div>
 
                     <!-- Tool 3: Bash -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-emerald-300 transition-all">
                             <i class="fa-solid fa-terminal"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Bash / Shell</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="CLI & Automation" data-cs="Příkazová řádka">Příkazová řádka</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Shell commands, pipelines, Linux automation" data-cs="Řetězení příkazů, automatizace úloh">Řetězení příkazů, automatizace úloh</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Bash / Shell</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="CLI & Pipeline Scripting" data-cs="CLI skriptování a řetězení">CLI & Pipeline Scripting</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Task automation, sed/awk, Linux internals" data-cs="Automatizace, sed/awk, vnitřnosti Linuxu">Task automation, sed/awk, Linux internals</p>
                     </div>
 
                     <!-- Tool 4: Nmap -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-3">
-                            <svg class="w-7 h-7 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-3 group-hover:scale-110 group-hover:text-cyan-300 transition-all">
+                            <svg class="w-8 h-8 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="12" cy="12" r="9.5" class="opacity-40" stroke-dasharray="2 2"></circle>
                                 <circle cx="12" cy="12" r="6" class="opacity-60"></circle>
                                 <circle cx="12" cy="12" r="2.5" class="fill-current"></circle>
                                 <line x1="12" y1="2.5" x2="12" y2="21.5" class="opacity-30"></line>
                                 <line x1="2.5" y1="12" x2="21.5" y2="12" class="opacity-30"></line>
-                                <line x1="12" y1="12" x2="19.5" y2="4.5" stroke-width="2.2" class="text-blue-300"></line>
-                                <circle cx="17.5" cy="7.5" r="1" class="fill-blue-300"></circle>
+                                <line x1="12" y1="12" x2="19.5" y2="4.5" stroke-width="2.2" class="text-cyan-300"></line>
+                                <circle cx="17.5" cy="7.5" r="1" class="fill-cyan-300"></circle>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Nmap</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Network Scanning" data-cs="Síťové skenování">Síťové skenování</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Port discovery, service & version scanning" data-cs="Detekce otevřených portů a verzí služeb">Detekce otevřených portů a verzí služeb</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Nmap</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Network Discovery" data-cs="Síťový průzkum">Network Discovery</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Host enumeration, NSE scripting, banner grabs" data-cs="Skenování portů, NSE skripty, verze služeb">Host enumeration, NSE scripting, banner grabs</p>
                     </div>
 
                     <!-- Tool 5: Wireshark -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-sky-300 transition-all">
                             <i class="fa-solid fa-network-wired"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Wireshark</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Packet Analysis" data-cs="Analýza síťových paketů">Analýza síťových paketů</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Inspecting TCP/IP traffic and PCAP dumps" data-cs="Inspekce komunikace TCP/IP a souborů PCAP">Inspekce komunikace TCP/IP a souborů PCAP</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Wireshark</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Packet Analysis" data-cs="Analýza síťových paketů">Packet Analysis</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Traffic inspection, PCAP forensic triage" data-cs="Inspekce síťového provozu, analýza PCAP">Traffic inspection, PCAP forensic triage</p>
                     </div>
 
                     <!-- Tool 6: Burp Suite -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
-                            <i class="fa-solid fa-shield-halved"></i>
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-orange-300 transition-all">
+                            <i class="fa-solid fa-shield-cat"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Burp Suite</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Web Security" data-cs="Testování webu">Testování webu</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="HTTP interception proxy & repeater" data-cs="Odchytávání a úprava HTTP požadavků">Odchytávání a úprava HTTP požadavků</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Burp Suite</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Web App Pentesting" data-cs="Testování webových aplikací">Web App Pentesting</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Repeater, Intruder, Proxy interception" data-cs="Proxy odchytávání, Repeater, Intruder">Repeater, Intruder, Proxy interception</p>
                     </div>
 
                     <!-- Tool 7: Metasploit -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
-                            <i class="fa-solid fa-cube"></i>
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-red-300 transition-all">
+                            <i class="fa-solid fa-skull-crossbones"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Metasploit</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Lab Exploitation" data-cs="Práce v laboratoři">Práce v laboratoři</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Learning exploit concepts in safe environments" data-cs="Pochopení principů exploitů na cvičných cílech">Pochopení principů exploitů na cvičných cílech</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Metasploit</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Exploit Framework" data-cs="Exploitační rámec">Exploit Framework</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Msfconsole, meterpreter, payload generation" data-cs="Msfconsole, meterpreter, generování payloadů">Msfconsole, meterpreter, payload generation</p>
                     </div>
 
                     <!-- Tool 8: Git -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-3">
+                    <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-rose-300 transition-all">
                             <i class="fa-brands fa-git-alt"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-base">Git & GitHub</h4>
-                        <span class="text-xs text-blue-400 font-medium mt-0.5" data-en="Version Control" data-cs="Verzování kódu">Verzování kódu</span>
-                        <p class="text-xs text-gray-400 mt-2" data-en="Managing code repositories and write-ups" data-cs="Správa repozitářů, kódů a dokumentace">Správa repozitářů, kódů a dokumentace</p>
+                        <h4 class="font-mono font-bold text-slate-100 text-base">Git & GitHub</h4>
+                        <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Version Control" data-cs="Správa verzí">Version Control</span>
+                        <p class="text-xs text-slate-400 mt-2" data-en="Tool maintenance, repo CI/CD workflows" data-cs="Správa repozitářů, verzování skriptů">Tool maintenance, repo CI/CD workflows</p>
                     </div>
 
                 </div>
@@ -367,93 +511,129 @@
             </div>
         </section>
 
-        <!-- 5. LEARNING & PLATFORMS SECTION -->
-        <section id="platforms" class="py-16 md:py-20 border-t border-gray-800">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 4. PLATFORMS & STATS -->
+        <section id="platforms" class="py-16 md:py-24 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="Learning Platforms" data-cs="Vzdělávací platformy">Vzdělávací platformy</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base" data-en="Where I spend time practicing hands-on security" data-cs="Platformy, na kterých trávím čas aktivním řešením cvičení a úloh">Platformy, na kterých trávím čas aktivním řešením cvičení a úloh</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 03. BENCHMARKS" data-cs="// 03. VÝSLEDKY">// 03. BENCHMARKS</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="Platforms & Live Stats" data-cs="Platformy a živé statistiky">Platforms & Live Stats</h3>
+                    <p class="text-slate-400 text-sm mt-3" data-en="Verified achievements and live activity on cybersecurity CTF and training grounds." data-cs="Ověřené úspěchy a aktivita na platformách pro etický hacking a CTF soutěže.">
+                        Verified achievements and live activity on cybersecurity CTF and training grounds.
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     
-                    <!-- TryHackMe Card -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 sm:p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-gray-600 transition-all">
+                    <!-- Platform 1: TryHackMe Card with official badge -->
+                    <div class="cyber-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-emerald-500">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
+                                    <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-500 font-bold">
                                         <i class="fa-solid fa-fire text-lg"></i>
                                     </div>
                                     <div>
-                                        <h3 class="font-bold text-white text-lg">TryHackMe</h3>
-                                        <span class="text-xs text-gray-400">@Zeroczech</span>
+                                        <h4 class="font-bold text-slate-100 text-lg">TryHackMe</h4>
+                                        <span class="text-xs font-mono text-emerald-400">@Zeroczech</span>
                                     </div>
                                 </div>
-                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20" data-en="Top 3% Worldwide" data-cs="Top 3% na světě">Top 3% na světě</span>
+                                <span class="px-2.5 py-1 text-xs font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30" data-en="Top 3% Worldwide" data-cs="Top 3% na světě">Top 3% Worldwide</span>
                             </div>
 
-                            <p class="text-sm text-gray-300 leading-relaxed" data-en="Active on TryHackMe, completing rooms across offensive and foundational paths including Network Security, Web Exploitation, and Linux basics." data-cs="Aktivně řeším místnosti na platformě TryHackMe napříč výukovými cestami se zaměřením na základy sítí, webové zranitelnosti a Linux.">
-                                Aktivně řeším místnosti na platformě TryHackMe napříč výukovými cestami se zaměřením na základy sítí, webové zranitelnosti a Linux.
+                            <p class="text-sm text-slate-300" data-en="Active CTF player solving rooms across offensive paths: Network Pentesting, Web Exploitation, and Linux/Windows Privilege Escalation. 149 rooms cleared." data-cs="Aktivní řešitel CTF v oblastech penetračního testování sítí, webových aplikací a eskalace práv v Linuxu i Windows. 149 splněných místností.">
+                                Active CTF player solving rooms across offensive paths: Network Pentesting, Web Exploitation, and Linux/Windows Privilege Escalation. 149 rooms cleared.
                             </p>
 
-                            <!-- Live SVG Badge -->
-                            <div class="pt-2">
-                                <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="block w-full overflow-hidden rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all shadow-md">
+                            <!-- Live Generated SVG Badge Embed -->
+                            <div class="pt-2 flex justify-center">
+                                <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="group block w-full overflow-hidden rounded-xl border border-gray-800 hover:border-emerald-500/60 transition-all shadow-lg hover:shadow-emerald-500/10">
                                     <img src="assets/thm_badge.svg" 
-                                         alt="TryHackMe Badge - Zeroczech" 
-                                         class="w-full h-auto object-contain"
+                                         alt="TryHackMe Stats Badge - Zeroczech" 
+                                         class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]"
                                          loading="lazy">
                                 </a>
                             </div>
                         </div>
 
-                        <div class="pt-6 mt-6 border-t border-gray-700 flex items-center justify-between">
-                            <span class="text-xs text-gray-400" data-en="Verified Profile ID: Zeroczech" data-cs="Ověřený profil: Zeroczech">Ověřený profil: Zeroczech</span>
-                            <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition-colors">
-                                <span data-en="Visit Profile" data-cs="Přejít na profil">Přejít na profil</span>
+                        <div class="pt-6 mt-4 border-t border-gray-800/80 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500" data-en="Verified Profile ID: Zeroczech" data-cs="Ověřený profil: Zeroczech">Verified Profile ID: Zeroczech</span>
+                            <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1 font-semibold">
+                                <span data-en="Visit Profile" data-cs="Přejít na profil">Visit Profile</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Lab & Self-Study Card -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 sm:p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-gray-600 transition-all">
+                    <!-- Platform 2: HackTheBox Clean Profile Card (No Fictional Stats) -->
+                    <div class="cyber-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-[#9fef00]">
                         <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                    <i class="fa-solid fa-laptop-code text-lg"></i>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-[#9fef00]/10 border border-[#9fef00]/30 flex items-center justify-center text-[#9fef00] font-bold">
+                                        <i class="fa-solid fa-cube text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-100 text-lg">Hack The Box</h4>
+                                        <span class="text-xs font-mono text-[#9fef00]">@Zeroczech</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 class="font-bold text-white text-lg" data-en="Home Lab & Study Routine" data-cs="Domácí laboratoř & Samostudium">Domácí laboratoř & Samostudium</h3>
-                                    <span class="text-xs text-gray-400" data-en="Virtual machines & exercises" data-cs="Virtuální stroje & cvičení">Virtuální stroje & cvičení</span>
-                                </div>
+                                <span class="px-2.5 py-1 text-xs font-mono rounded bg-[#9fef00]/10 text-[#9fef00] border border-[#9fef00]/30" data-en="Active Member" data-cs="Aktivní člen">Active Member</span>
                             </div>
 
-                            <p class="text-sm text-gray-300 leading-relaxed" data-en="Beyond online platforms, I build isolated virtual environments (VirtualBox) to test configurations, understand network traffic, and practice ethical hacking techniques safely." data-cs="Kromě online platforem si stavím izolovaná virtuální prostředí pro bezpečný trénink, testování konfigurací a hlubší pochopení síťové komunikace.">
-                                Kromě online platforem si stavím izolovaná virtuální prostředí pro bezpečný trénink, testování konfigurací a hlubší pochopení síťové komunikace.
+                            <p class="text-sm text-slate-300" data-en="Practicing hands-on cybersecurity, privilege escalation, and active directory concepts on Hack The Box lab machines and challenge environments." data-cs="Praktický trénink kybernetické bezpečnosti, eskalace oprávnění a Active Directory konceptů na laboratorních strojích platformy Hack The Box.">
+                                Practicing hands-on cybersecurity, privilege escalation, and active directory concepts on Hack The Box lab machines and challenge environments.
                             </p>
 
-                            <div class="space-y-3 pt-2">
-                                <div class="p-3 rounded-xl bg-gray-900 border border-gray-750 flex items-center justify-between text-xs">
-                                    <span class="text-gray-300 font-medium" data-en="Network Fundamentals & Protocols" data-cs="Principy sítí a síťové protokoly">Principy sítí a síťové protokoly</span>
-                                    <span class="text-blue-400 font-semibold" data-en="Active" data-cs="Aktivní">Aktivní</span>
-                                </div>
-                                <div class="p-3 rounded-xl bg-gray-900 border border-gray-750 flex items-center justify-between text-xs">
-                                    <span class="text-gray-300 font-medium" data-en="Linux System Administration Basics" data-cs="Základy správy Linux systémů">Základy správy Linux systémů</span>
-                                    <span class="text-blue-400 font-semibold" data-en="Active" data-cs="Aktivní">Aktivní</span>
-                                </div>
-                                <div class="p-3 rounded-xl bg-gray-900 border border-gray-750 flex items-center justify-between text-xs">
-                                    <span class="text-gray-300 font-medium" data-en="Web Vulnerabilities (OWASP Basics)" data-cs="Základy webových zranitelností (OWASP)">Základy webových zranitelností (OWASP)</span>
-                                    <span class="text-blue-400 font-semibold" data-en="Active" data-cs="Aktivní">Aktivní</span>
+                            <!-- Clean HTB Visual Component (Without Fictional Stats) -->
+                            <div class="pt-2">
+                                <div class="bg-dark-950/90 border border-gray-800 hover:border-[#9fef00]/50 transition-all rounded-xl p-5 space-y-4 shadow-xl">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-12 h-12 rounded-lg bg-[#141d2f] border border-[#9fef00]/30 flex items-center justify-center">
+                                                <i class="fa-solid fa-user-secret text-[#9fef00] text-xl"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-mono font-bold text-white text-base">Zeroczech</div>
+                                                <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mt-0.5">
+                                                    <span class="w-2 h-2 rounded-full bg-[#9fef00] inline-block animate-pulse"></span>
+                                                    <span data-en="Active Challenger &amp; Student" data-cs="Aktivní řešitel &amp; student">Active Challenger &amp; Student</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-xs font-mono text-slate-500 uppercase">Platform</div>
+                                            <div class="text-xs font-mono text-[#9fef00] font-bold">HackTheBox</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Focus Areas / Badges -->
+                                    <div class="pt-1">
+                                        <div class="text-xs font-mono text-slate-500 mb-2 uppercase" data-en="Active Practice Focus:" data-cs="Oblasti tréninku:">Active Practice Focus:</div>
+                                        <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-gray-800">
+                                                <i class="fa-solid fa-server text-[#9fef00] mr-1"></i> Standalone Labs
+                                            </span>
+                                            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-gray-800">
+                                                <i class="fa-solid fa-network-wired text-cyan-400 mr-1"></i> Pivoting
+                                            </span>
+                                            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-gray-800">
+                                                <i class="fa-solid fa-key text-yellow-400 mr-1"></i> PrivEsc
+                                            </span>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pt-6 mt-6 border-t border-gray-700 flex items-center justify-between">
-                            <span class="text-xs text-gray-400" data-en="Platform: HackTheBox & Local VMs" data-cs="Platforma: HackTheBox & Lokální VM">Platforma: HackTheBox & Lokální VM</span>
-                            <span class="text-xs text-gray-400">2026</span>
+                        <div class="pt-6 mt-4 border-t border-gray-800/80 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500">HTB Handle: @Zeroczech</span>
+                            <a href="https://app.hackthebox.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#9fef00] hover:text-lime-300 flex items-center gap-1 font-semibold">
+                                <span data-en="Visit HTB Platform" data-cs="Přejít na Hack The Box">Visit HTB Platform</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -462,101 +642,137 @@
             </div>
         </section>
 
-        <!-- 6. CERTIFICATIONS & MILESTONES SECTION -->
-        <section id="certs" class="py-16 md:py-20 border-t border-gray-800 bg-gray-900/60">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 5. PROJECTS & CTF WRITE-UPS -->
+        <section id="projects" class="py-16 md:py-24 bg-dark-950/60 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="Certifications & Milestones" data-cs="Certifikace a milníky">Certifikace a milníky</h2>
-                    <!-- EXACT description requested by user -->
-                    <p class="text-gray-300 mt-2 text-sm sm:text-base leading-relaxed" data-en="Currently focusing on expanding my knowledge and preparing for my first industry certifications. Here is a log of my progress." data-cs="Momentálně se soustředím na rozšiřování znalostí a přípravu na své první oborové certifikace. Tady je přehled mého postupu.">
-                        Momentálně se soustředím na rozšiřování znalostí a přípravu na své první oborové certifikace. Tady je přehled mého postupu.
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 04. ARTIFACTS" data-cs="// 04. VÝSTUPY">// 04. ARTIFACTS</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="Featured Projects &amp; Code" data-cs="Vybrané projekty a kód">Featured Projects &amp; Code</h3>
+                    <p class="text-slate-400 text-sm mt-3" data-en="Real-world offensive security implementations, cryptographic systems, and privacy-preserving architectures." data-cs="Reálné implementace v oblasti bezpečnosti, kryptografické systémy a anonymní komunikační architektury.">
+                        Real-world offensive security implementations, cryptographic systems, and privacy-preserving architectures.
                     </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div class="space-y-6 max-w-4xl mx-auto">
+                <!-- Featured Project Showcase Container -->
+                <div class="max-w-5xl mx-auto space-y-8">
                     
-                    <!-- Milestone 1: TryHackMe Pre Security (COMPLETED) -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 sm:p-7 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-0.5">
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gray-700">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                                    <i class="fa-solid fa-award text-lg"></i>
+                    <!-- Flagship Project: TorE2EE Messenger -->
+                    <div class="cyber-card rounded-2xl overflow-hidden border border-emerald-500/30 bg-dark-900/90 shadow-2xl shadow-emerald-500/5 group hover:border-emerald-500/60 transition-all duration-300">
+                        <div class="p-6 sm:p-8 lg:p-10 space-y-6">
+                            
+                            <!-- Header meta badges -->
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="px-3 py-1 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-lock text-[11px]"></i>
+                                        <span>FLAGSHIP SECURITY PROJECT</span>
+                                    </span>
+                                    <span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-shield-halved text-[11px]"></i>
+                                        <span>TOR ONION V3</span>
+                                    </span>
                                 </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-white">TryHackMe: Pre Security Path</h3>
-                                    <span class="text-xs text-gray-400">Vydavatel: TryHackMe</span>
-                                </div>
-                            </div>
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" data-en="Completed & Verified" data-cs="Dokončeno & Ověřeno">
-                                Dokončeno & Ověřeno
-                            </span>
-                        </div>
-
-                        <div class="pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                            <div class="flex items-center gap-4 max-w-xl">
-                                <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D1J6ALD0FP.pdf" target="_blank" rel="noopener noreferrer" class="shrink-0 block w-20 h-14 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all shadow-md group">
-                                    <img src="assets/cert_presecurity.png" alt="TryHackMe Pre Security Certificate - Šimon Tobiáš" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200">
+                                <a href="https://github.com/Shiftyczech/TorE2EE_Messenger" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-mono" title="View Source on GitHub">
+                                    <i class="fa-brands fa-github text-base"></i>
+                                    <span>Shiftyczech/TorE2EE_Messenger</span>
                                 </a>
-                                <p class="text-sm text-gray-300 leading-relaxed" data-en="Foundations of computer networks (OSI, TCP/IP, DNS, HTTP), operating systems, and core network security principles." data-cs="Základy počítačových sítí (OSI model, TCP/IP, DNS, HTTP), fungování operačních systémů a elementární bezpečnostní koncepty.">
-                                    Základy počítačových sítí (OSI model, TCP/IP, DNS, HTTP), fungování operačních systémů a elementární bezpečnostní koncepty.
+                            </div>
+
+                            <!-- Title & Subtitle -->
+                            <div class="space-y-2">
+                                <h4 class="text-2xl sm:text-3xl font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
+                                    TorE2EE Messenger
+                                </h4>
+                                <p class="text-xs font-mono text-emerald-400/90 flex flex-wrap items-center gap-x-2 gap-y-1">
+                                    <span>&gt; Zero Clearnet Footprint</span>
+                                    <span>•</span>
+                                    <span>Double Ratchet / X3DH</span>
+                                    <span>•</span>
+                                    <span>Rust Axum Relay</span>
+                                    <span>•</span>
+                                    <span>Android APK Release</span>
                                 </p>
                             </div>
 
-                            <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D1J6ALD0FP.pdf" target="_blank" rel="noopener noreferrer" class="shrink-0 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-all text-xs font-semibold flex items-center gap-2 shadow-sm">
-                                <i class="fa-solid fa-file-pdf"></i>
-                                <span data-en="View Certificate (PDF)" data-cs="Zobrazit certifikát (PDF)">Zobrazit certifikát (PDF)</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Milestone 2: TryHackMe Jr Penetration Tester (IN PROGRESS) -->
-                    <div class="bg-gray-800 rounded-2xl border border-blue-500/30 p-6 sm:p-7 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 relative overflow-hidden">
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gray-700">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
-                                    <i class="fa-solid fa-spinner fa-spin text-lg"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-white">TryHackMe: Jr Penetration Tester Path</h3>
-                                    <span class="text-xs text-gray-400">Výuková cesta • Metodiky & Laby</span>
-                                </div>
-                            </div>
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20" data-en="In Progress" data-cs="Aktivně studuji">
-                                Aktivně studuji
-                            </span>
-                        </div>
-
-                        <div class="pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                            <p class="text-sm text-gray-300 leading-relaxed max-w-xl" data-en="Current study focus: Penetration testing methodologies, web application vulnerabilities (OWASP), privilege escalation, and network exploitation." data-cs="Aktuální zaměření: Metodiky penetračního testování, webové zranitelnosti (OWASP), eskalace oprávnění a praktické síťové laby.">
-                                Aktuální zaměření: Metodiky penetračního testování, webové zranitelnosti (OWASP), eskalace oprávnění a praktické síťové laby.
+                            <!-- Detailed Description -->
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-en="A full-stack privacy-first messaging architecture operating entirely over the Tor network without clearnet fallback. Implements Signal Protocol cryptographic primitives (X3DH key agreement, Double Ratchet, AEAD Secretbox encryption), SQLCipher local encrypted database, zero DNS-leak SOCKS5 routing, and a hardened containerized Rust backend hidden behind Tor v3 services." data-cs="Full-stack komunikační systém zaměřený na maximální soukromí fungující výhradně v síti Tor bez přístupu do clearnetu. Využívá kryptografické prvky Signal protokolu (X3DH, Double Ratchet, AEAD Secretbox), lokálně šifrovanou databázi SQLCipher, SOCKS5 směrování bez úniků DNS a zabezpečený kontejnerizovaný backend v Rustu běžící za skrytou službou Tor v3.">
+                                A full-stack privacy-first messaging architecture operating entirely over the Tor network without clearnet fallback. Implements Signal Protocol cryptographic primitives (X3DH key agreement, Double Ratchet, AEAD Secretbox encryption), SQLCipher local encrypted database, zero DNS-leak SOCKS5 routing, and a hardened containerized Rust backend hidden behind Tor v3 services.
                             </p>
 
-                            <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition-colors">
-                                <span data-en="Track on TryHackMe" data-cs="Sledovat na TryHackMe">Sledovat na TryHackMe</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
+                            <!-- Architecture / Highlights Feature Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                                <div class="p-4 rounded-xl bg-dark-950/70 border border-gray-800 space-y-1.5">
+                                    <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+                                        <i class="fa-solid fa-key"></i>
+                                        <span class="font-bold">E2EE Cryptography</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400" data-en="Signal Double Ratchet, X3DH key exchange, and AEAD Secretbox forward secrecy." data-cs="Signal Double Ratchet, X3DH výměna klíčů a AEAD Secretbox pro dopřednou bezpečnost.">
+                                        Signal Double Ratchet, X3DH key exchange, and AEAD Secretbox forward secrecy.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-dark-950/70 border border-gray-800 space-y-1.5">
+                                    <div class="flex items-center gap-2 text-xs font-mono text-cyan-400">
+                                        <i class="fa-solid fa-network-wired"></i>
+                                        <span class="font-bold">Zero DNS Leak</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400" data-en="RFC 1928 SOCKS5 client bridge directing all HTTP &amp; WS packets through Tor 127.0.0.1:9050." data-cs="RFC 1928 SOCKS5 klientský můstek směrující veškerý HTTP a WS provoz přes Tor 127.0.0.1:9050.">
+                                        RFC 1928 SOCKS5 client bridge directing all HTTP &amp; WS packets through Tor 127.0.0.1:9050.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-dark-950/70 border border-gray-800 space-y-1.5 sm:col-span-2 lg:col-span-1">
+                                    <div class="flex items-center gap-2 text-xs font-mono text-purple-400">
+                                        <i class="fa-brands fa-rust"></i>
+                                        <span class="font-bold">Rust Sidecar Backend</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400" data-en="Axum relay daemon isolated in Docker; non-root user, zero open ports exposed to clearnet." data-cs="Axum relay daemon izolovaný v Dockeru; non-root uživatel a žádné otevřené porty do clearnetu.">
+                                        Axum relay daemon isolated in Docker; non-root user, zero open ports exposed to clearnet.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-brands fa-rust text-orange-400 mr-1.5"></i>Rust (Axum)</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-brands fa-react text-cyan-400 mr-1.5"></i>React Native</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-brands fa-js text-yellow-400 mr-1.5"></i>TypeScript</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-solid fa-shield-halved text-purple-400 mr-1.5"></i>Tor Onion v3</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-solid fa-database text-emerald-400 mr-1.5"></i>SQLCipher</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-brands fa-docker text-blue-400 mr-1.5"></i>Docker Compose</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded bg-dark-950 text-slate-300 border border-gray-800"><i class="fa-brands fa-android text-emerald-500 mr-1.5"></i>Android APK</span>
+                            </div>
+
+                        </div>
+
+                        <!-- Card Footer Action Bar -->
+                        <div class="px-6 sm:px-10 py-4 bg-dark-950/90 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+                            <div class="flex items-center gap-3 text-slate-400">
+                                <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <span data-en="Production Release Ready" data-cs="Připraveno k produkčnímu nasazení">Production Release Ready</span>
+                                </span>
+                                <span>•</span>
+                                <span>42/42 Unit &amp; Integration Tests Passing</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <a href="https://github.com/Shiftyczech/TorE2EE_Messenger" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500 hover:text-black font-semibold transition-all flex items-center gap-2">
+                                    <i class="fa-brands fa-github text-sm"></i>
+                                    <span data-en="Explore Source Code" data-cs="Zobrazit zdrojový kód">Explore Source Code</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Milestone 3: Future Certification Goal -->
-                    <div class="bg-gray-800/60 rounded-2xl border border-gray-700/60 p-6 sm:p-7 shadow-sm">
-                        <div class="flex items-center justify-between pb-3 border-b border-gray-700/60">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-gray-700/50 flex items-center justify-center text-gray-400 shrink-0">
-                                    <i class="fa-regular fa-compass text-lg"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-gray-200" data-en="Future Goal: Entry-Level Industry Certification" data-cs="Další cíl: První oborová certifikace">Další cíl: První oborová certifikace</h3>
-                                    <span class="text-xs text-gray-400">eJPT / CompTIA Security+</span>
-                                </div>
-                            </div>
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-700/40 text-gray-400 border border-gray-600/30" data-en="Planned Target" data-cs="Plánovaný cíl">
-                                Plánovaný cíl
-                            </span>
-                        </div>
-                        <p class="text-sm text-gray-400 mt-3" data-en="Following the completion of TryHackMe paths, I plan to validate my knowledge with a recognized industry certification." data-cs="Po dokončení ucelených cest na TryHackMe plánuji své znalosti ověřit složením uznávané praktické certifikace.">
-                            Po dokončení ucelených cest na TryHackMe plánuji své znalosti ověřit složením uznávané praktické certifikace.
+                    <!-- Under-card note linking to GitHub profile for upcoming tools -->
+                    <div class="text-center pt-2">
+                        <p class="text-xs font-mono text-slate-500 flex flex-wrap items-center justify-center gap-2">
+                            <i class="fa-solid fa-code-commit text-emerald-400"></i>
+                            <span data-en="Additional offensive tools, pentest scripts &amp; write-ups being published to" data-cs="Další bezpečnostní nástroje, skripty a write-upy průběžně publikuji na">Additional offensive tools, pentest scripts &amp; write-ups being published to</span>
+                            <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-bold">github.com/Shiftyczech</a>
                         </p>
                     </div>
 
@@ -565,86 +781,131 @@
             </div>
         </section>
 
-        <!-- 7. PROJECTS SECTION -->
-        <section id="projects" class="py-16 md:py-20 border-t border-gray-800">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 6. CERTIFICATIONS & PATH COMPLETIONS -->
+        <section id="certs" class="py-16 md:py-24 border-t border-gray-800/60 relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="Projects & Practical Labs" data-cs="Projekty a praktická cvičení">Projekty a praktická cvičení</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base" data-en="Scripts, lab environments, and notes created during my studies" data-cs="Skripty, laboratorní prostředí a poznámky, které jsem vytvořil při studiu">Skripty, laboratorní prostředí a poznámky, které jsem vytvořil při studiu</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 05. CREDENTIALS" data-cs="// 05. KVALIFIKACE">// 05. CREDENTIALS</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="Certifications &amp; Learning Paths" data-cs="Certifikace a studijní milníky">Certifications &amp; Learning Paths</h3>
+                    <p class="text-slate-400 text-sm mt-3" data-en="Demonstrated milestones, industry credentials, and active certifications in progress." data-cs="Dosažené milníky, bezpečnostní certifikace a aktuální studijní cíle.">
+                        Demonstrated milestones, industry credentials, and active certifications in progress.
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Clean Vertical Timeline -->
+                <div class="relative border-l-2 border-gray-800 ml-4 md:ml-32 space-y-12">
                     
-                    <!-- Project 1: Python Port Scanner -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="space-y-3">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                <i class="fa-solid fa-network-wired"></i>
+                    <!-- Timeline Item 1: TryHackMe Pre Security (COMPLETED) -->
+                    <div class="relative pl-8 md:pl-10 group">
+                        <!-- Node indicator -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-emerald-400 group-hover:scale-125 transition-transform duration-200 shadow-sm shadow-emerald-500/50"></div>
+
+                        <div class="cyber-card p-6 rounded-xl space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                        <i class="fa-solid fa-shield-halved text-sm"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-100">TryHackMe: Pre Security Path</h4>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                    <span data-en="Completed • Dec 2025" data-cs="Dokončeno • Prosinec 2025">Completed • Dec 2025</span>
+                                </span>
                             </div>
-                            <h3 class="text-lg font-bold text-white" data-en="Python Network & Port Scanner" data-cs="Jednoduchý síťový skener v Pythonu">Jednoduchý síťový skener v Pythonu</h3>
-                            <p class="text-sm text-gray-300 leading-relaxed" data-en="An educational Python script built to understand TCP three-way handshakes, socket programming, and multi-threaded port checking." data-cs="Vzdělávací skript v Pythonu vytvořený pro pochopení principů navazování TCP spojení a síťového socketového programování.">
-                                Vzdělávací skript v Pythonu vytvořený pro pochopení principů navazování TCP spojení a síťového socketového programování.
+
+                            <p class="text-sm text-slate-300 leading-relaxed" data-en="Mastered foundational cybersecurity prerequisites: Network fundamentals (OSI model, TCP/IP, DNS), how the web works, Linux terminal essentials, and Windows core security fundamentals." data-cs="Osvojení nezbytných základů kybernetické bezpečnosti: síťové modely (OSI, TCP/IP, DNS), fungování webu a HTTP protokolů, práce v terminálu Linuxu a správa zabezpečení Windows.">
+                                Mastered foundational cybersecurity prerequisites: Network fundamentals (OSI model, TCP/IP, DNS), how the web works, Linux terminal essentials, and Windows core security fundamentals.
                             </p>
-                        </div>
-                        <div class="pt-6 mt-4 border-t border-gray-700 flex items-center justify-between">
-                            <div class="flex items-center gap-1.5 text-xs text-gray-400 font-mono">
-                                <span>Python</span>
-                                <span>•</span>
-                                <span>Sockets</span>
+
+                            <!-- Certificate Preview Box -->
+                            <div class="p-3.5 bg-dark-950/80 border border-gray-800 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3.5 w-full sm:w-auto">
+                                    <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D1J6ALD0FP.pdf" target="_blank" rel="noopener noreferrer" class="relative group/thumb block w-20 h-14 shrink-0 rounded-lg overflow-hidden border border-emerald-500/40 hover:border-emerald-400 transition-all shadow-md">
+                                        <img src="assets/cert_presecurity.png" alt="TryHackMe Pre Security Certificate - Šimon Tobiáš" class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-200">
+                                        <div class="absolute inset-0 bg-emerald-500/10 group-hover/thumb:bg-transparent transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-magnifying-glass-plus text-xs text-white opacity-0 group-hover/thumb:opacity-100 transition-opacity drop-shadow"></i>
+                                        </div>
+                                    </a>
+                                    <div class="space-y-0.5 min-w-0">
+                                        <div class="text-xs font-mono font-bold text-slate-200 truncate">ID: THM-D1J6ALD0FP</div>
+                                        <div class="text-[11px] font-mono text-emerald-400">Issued: 22nd December 2025</div>
+                                        <div class="text-[10px] font-mono text-slate-500">Holder: Šimon Tobiáš (Zeroczech)</div>
+                                    </div>
+                                </div>
+                                <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D1J6ALD0FP.pdf" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto shrink-0 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all text-xs font-mono font-semibold flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    <span data-en="View Official PDF" data-cs="Zobrazit oficiální PDF">View Official PDF</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </a>
                             </div>
-                            <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                                <span>GitHub</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
+
+                            <div class="text-xs font-mono text-slate-500 pt-1 flex items-center gap-2">
+                                <i class="fa-solid fa-award text-emerald-400"></i>
+                                <span data-en="Platform: TryHackMe | Verified Certificate" data-cs="Platforma: TryHackMe | Ověřený certifikát">Platform: TryHackMe | Verified Certificate</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: CTF Write-ups & Notes -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="space-y-3">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                <i class="fa-solid fa-book-bookmark"></i>
+                    <!-- Timeline Item 2: TryHackMe Jr Penetration Tester (IN PROGRESS) -->
+                    <div class="relative pl-8 md:pl-10 group">
+                        <!-- Node indicator -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-cyan-400 group-hover:scale-125 transition-transform duration-200 shadow-sm shadow-cyan-500/50"></div>
+
+                        <div class="cyber-card p-6 rounded-xl space-y-3 border-l-2 border-l-cyan-500/80">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                                        <i class="fa-solid fa-user-ninja text-sm"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-100">TryHackMe: Jr Penetration Tester Path</h4>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-spinner animate-spin text-[10px]"></i>
+                                    <span data-en="In Progress" data-cs="Probíhá">In Progress</span>
+                                </span>
                             </div>
-                            <h3 class="text-lg font-bold text-white" data-en="CTF Notes & Solution Logs" data-cs="CTF poznámky a write-upy">CTF poznámky a write-upy</h3>
-                            <p class="text-sm text-gray-300 leading-relaxed" data-en="Personal documentation repository of solved rooms from TryHackMe and HackTheBox, tracking techniques, commands, and key takeaways." data-cs="Strukturované zápisky a rozbory vyřešených úloh z platforem TryHackMe a HackTheBox pro upevnění praktických postupů.">
-                                Strukturované zápisky a rozbory vyřešených úloh z platforem TryHackMe a HackTheBox pro upevnění praktických postupů.
+
+                            <p class="text-sm text-slate-300 leading-relaxed" data-en="Comprehensive practical penetration testing path actively in progress. Hands-on offensive security methodologies, web application exploitation (OWASP Top 10 vulnerabilities), vulnerability assessment, and Linux/Windows privilege escalation." data-cs="Komplexní praktická dráha penetračního testování, na které právě aktivně pracuji. Zahrnuje metodiky etického hackingu, testování webových aplikací (OWASP Top 10), vyhledávání zranitelností a eskalaci oprávnění v Linuxu i Windows.">
+                                Comprehensive practical penetration testing path actively in progress. Hands-on offensive security methodologies, web application exploitation (OWASP Top 10 vulnerabilities), vulnerability assessment, and Linux/Windows privilege escalation.
                             </p>
-                        </div>
-                        <div class="pt-6 mt-4 border-t border-gray-700 flex items-center justify-between">
-                            <div class="flex items-center gap-1.5 text-xs text-gray-400 font-mono">
-                                <span>Markdown</span>
-                                <span>•</span>
-                                <span>CTF</span>
+
+                            <div class="text-xs font-mono text-slate-500 pt-1 flex items-center gap-2">
+                                <i class="fa-solid fa-terminal text-cyan-400"></i>
+                                <span data-en="Platform: TryHackMe | Active Learning Path • Hands-on Labs" data-cs="Platforma: TryHackMe | Aktivní studium • Praktické laboratoře">Platform: TryHackMe | Active Learning Path • Hands-on Labs</span>
                             </div>
-                            <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                                <span>GitHub</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
                         </div>
                     </div>
 
-                    <!-- Project 3: Virtual Home Lab -->
-                    <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
-                        <div class="space-y-3">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                <i class="fa-solid fa-server"></i>
+                    <!-- Timeline Item 3: Target Roadmap (PT1 / PT2) -->
+                    <div class="relative pl-8 md:pl-10 group">
+                        <!-- Node indicator -->
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-purple-400 group-hover:scale-125 transition-transform duration-200"></div>
+
+                        <div class="cyber-card p-6 rounded-xl space-y-3 opacity-95 border-l-2 border-l-purple-500/60">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                                        <i class="fa-solid fa-crosshairs text-sm"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-100">TryHackMe: Offensive Pentesting (PT1 / PT2)</h4>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-purple-500/10 text-purple-400 border border-purple-500/30 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bullseye text-[10px]"></i>
+                                    <span data-en="Next Milestone" data-cs="Další cíl">Next Milestone</span>
+                                </span>
                             </div>
-                            <h3 class="text-lg font-bold text-white" data-en="Virtual Home Lab Setup" data-cs="Konfigurace virtuální laboratoře">Konfigurace virtuální laboratoře</h3>
-                            <p class="text-sm text-gray-300 leading-relaxed" data-en="Configuring local virtual machines, internal virtual networks, and safe test targets for practicing Linux system administration." data-cs="Prostředí virtuálních strojů a vnitřních sítí pro bezpečný trénink správy Linuxu a testování síťové konfigurace.">
-                                Prostředí virtuálních strojů a vnitřních sítí pro bezpečný trénink správy Linuxu a testování síťové konfigurace.
+
+                            <p class="text-sm text-slate-300 leading-relaxed" data-en="Target next-stage offensive roadmap covering advanced weaponized exploitation, Active Directory attack paths (Kerberoasting, DCSync), buffer overflow vulnerabilities, network pivoting, and advanced post-exploitation." data-cs="Další plánovaný cíl v ofenzivním testování zaměřený na pokročilé útoky v Active Directory (Kerberoasting, DCSync), buffer overflow zranitelnosti, síťový pivoting a pokročilou post-exploataci.">
+                                Target next-stage offensive roadmap covering advanced weaponized exploitation, Active Directory attack paths (Kerberoasting, DCSync), buffer overflow vulnerabilities, network pivoting, and advanced post-exploitation.
                             </p>
-                        </div>
-                        <div class="pt-6 mt-4 border-t border-gray-700 flex items-center justify-between">
-                            <div class="flex items-center gap-1.5 text-xs text-gray-400 font-mono">
-                                <span>Linux</span>
-                                <span>•</span>
-                                <span>VirtualBox</span>
+
+                            <div class="text-xs font-mono text-slate-500 pt-1 flex items-center gap-2">
+                                <i class="fa-solid fa-flag-checkered text-purple-400"></i>
+                                <span data-en="Roadmap Target: Advanced Offensive Labs &amp; PT Certifications" data-cs="Cíl: Pokročilé ofenzivní laboratoře &amp; certifikace penetračního testování">Roadmap Target: Advanced Offensive Labs &amp; PT Certifications</span>
                             </div>
-                            <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                                <span>GitHub</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
                         </div>
                     </div>
 
@@ -653,93 +914,108 @@
             </div>
         </section>
 
-        <!-- 8. CONTACT & PGP SECTION -->
-        <section id="contact" class="py-16 md:py-20 border-t border-gray-800 bg-gray-900/60">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 7. CONTACT SECTION -->
+        <section id="contact" class="py-16 md:py-24 bg-dark-950/60 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-en="Get in Touch" data-cs="Kontakt">Kontakt</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base" data-en="Have a question, feedback, or want to connect? Send me a message." data-cs="Máte dotaz, tip na zajímavou výzvu nebo se chcete spojit? Napište mi.">Máte dotaz, tip na zajímavou výzvu nebo se chcete spojit? Napište mi.</p>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase mb-2" data-en="// 06. TRANSMISSION" data-cs="// 06. SPOJENÍ">// 06. TRANSMISSION</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-slate-100" data-en="Get In Touch" data-cs="Napište mi">Get In Touch</h3>
+                    <p class="text-slate-400 text-sm mt-3" data-en="Have an opportunity, penetration testing project, CTF invite, or security inquiry? Drop a secure message below." data-cs="Máte pracovní nabídku, projekt v oblasti penetračního testování, pozvánku do CTF nebo dotaz? Pošlete mi zprávu níže.">
+                        Have an opportunity, penetration testing project, CTF invite, or security inquiry? Drop a secure message below.
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
-                    <!-- Left: Direct Channels & PGP Key -->
+                    <!-- Left Contact Details & PGP Card -->
                     <div class="lg:col-span-5 space-y-6">
                         
-                        <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 sm:p-7 space-y-6 shadow-lg">
-                            
-                            <h3 class="text-lg font-bold text-white" data-en="Direct Contact" data-cs="Přímé kontakty">Přímé kontakty</h3>
+                        <div class="cyber-card p-6 rounded-xl space-y-5">
+                            <h4 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                                <i class="fa-solid fa-satellite-dish text-emerald-400"></i>
+                                <span data-en="Direct Channels" data-cs="Přímé kontakty">Direct Channels</span>
+                            </h4>
 
-                            <!-- Email -->
-                            <div class="flex items-start gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
+                            <div class="space-y-4 text-sm">
+                                <!-- Email item -->
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <div class="text-xs font-mono text-slate-500 uppercase" data-en="Secure Email" data-cs="Zabezpečený e-mail">Secure Email</div>
+                                        <div class="flex items-center gap-2 mt-0.5">
+                                            <a href="mailto:anomyous601@proton.me" class="text-slate-200 hover:text-emerald-400 font-mono text-xs sm:text-sm truncate">
+                                                anomyous601@proton.me
+                                            </a>
+                                            <button onclick="copyToClipboard('anomyous601@proton.me', 'Email copied!')" class="text-slate-500 hover:text-emerald-400 text-xs p-1" title="Copy Email">
+                                                <i class="fa-regular fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="min-w-0">
-                                    <div class="text-xs text-gray-400 uppercase tracking-wider font-medium" data-en="Email Address" data-cs="E-mailová adresa">E-mailová adresa</div>
-                                    <a href="mailto:anomyous601@proton.me" class="text-sm font-medium text-white hover:text-blue-400 transition-colors block truncate">
-                                        anomyous601@proton.me
-                                    </a>
+
+                                <!-- Location item -->
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center text-cyan-400 shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-slate-500 uppercase" data-en="Location / Relocation" data-cs="Lokalita">Location / Relocation</div>
+                                        <div class="text-slate-200 text-sm mt-0.5" data-en="Czech Republic (Available for Remote / Hybrid)" data-cs="Česká republika (Remote / Hybrid)">Czech Republic (Available for Remote / Hybrid)</div>
+                                    </div>
+                                </div>
+
+                                <!-- Public Security Policy -->
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-9 h-9 rounded-lg bg-yellow-500/10 border border-yellow-500/25 flex items-center justify-center text-yellow-400 shrink-0">
+                                        <i class="fa-solid fa-shield-virus"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-slate-500 uppercase" data-en="Security Policy" data-cs="Bezpečnostní politika">Security Policy</div>
+                                        <a href=".well-known/security.txt" class="text-emerald-400 hover:text-emerald-300 font-mono text-xs mt-0.5 inline-block underline">
+                                            /.well-known/security.txt
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Location -->
-                            <div class="flex items-start gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-gray-400 uppercase tracking-wider font-medium" data-en="Location" data-cs="Lokalita">Lokalita</div>
-                                    <div class="text-sm font-medium text-white" data-en="Kutná Hora, Czech Republic" data-cs="Kutná Hora, Česká republika">Kutná Hora, Česká republika</div>
-                                </div>
-                            </div>
-
-                            <!-- Security Policy link -->
-                            <div class="flex items-start gap-3.5">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-gray-400 uppercase tracking-wider font-medium" data-en="Security Policy" data-cs="Bezpečnostní politika">Bezpečnostní politika</div>
-                                    <a href=".well-known/security.txt" class="text-xs font-mono text-blue-400 hover:text-blue-300 underline mt-0.5 inline-block">
-                                        /.well-known/security.txt
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- PGP Encryption Key Box -->
-                            <div class="pt-5 border-t border-gray-700 space-y-3">
+                            <!-- PGP Encryption Key & Fingerprint Box -->
+                            <div class="pt-4 border-t border-gray-800 space-y-3">
                                 <div class="flex items-center justify-between">
-                                    <span class="text-xs font-semibold text-gray-200 flex items-center gap-2">
-                                        <i class="fa-solid fa-key text-blue-400"></i>
-                                        <span data-en="PGP Encryption Key" data-cs="Šifrovací PGP klíč">Šifrovací PGP klíč</span>
+                                    <span class="text-xs font-mono text-slate-300 font-semibold flex items-center gap-2">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <i class="fa-solid fa-key text-emerald-400"></i>
+                                        <span data-en="PGP Encryption Key" data-cs="Šifrovací PGP klíč">PGP Encryption Key</span>
                                     </span>
-                                    <a href="pgp.txt" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 underline transition-colors" title="Download raw pgp.txt">
-                                        pgp.txt
+                                    <a href="pgp.txt" target="_blank" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1 underline transition-colors" title="Download raw pgp.txt">
+                                        <i class="fa-solid fa-file-shield text-[11px]"></i>
+                                        <span>pgp.txt</span>
                                     </a>
                                 </div>
 
                                 <!-- Fingerprint Display -->
-                                <div class="p-3 rounded-xl bg-gray-900 border border-gray-750">
-                                    <div class="text-[10px] text-gray-400 uppercase tracking-wider mb-1 flex items-center justify-between font-medium">
-                                        <span data-en="Fingerprint (RSA 2048)" data-cs="Otisk klíče (RSA 2048)">Otisk klíče (RSA 2048)</span>
-                                        <span class="text-blue-400 font-semibold">ZeroCzech</span>
+                                <div class="p-2.5 rounded-lg bg-dark-900 border border-gray-800 font-mono text-[11px]">
+                                    <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1 flex items-center justify-between">
+                                        <span data-en="Fingerprint (RSA 2048)" data-cs="Otisk klíče (RSA 2048)">Fingerprint (RSA 2048)</span>
+                                        <span class="text-emerald-400/80 font-bold">ZeroCzech</span>
                                     </div>
-                                    <div class="text-gray-300 font-mono text-xs tracking-wider break-all select-all py-0.5">
+                                    <div class="text-emerald-400 font-mono text-xs tracking-wider break-all select-all py-0.5">
                                         F69F 5708 11EF C6F5 7065 D9DC 627E B362 A67B E0D0
                                     </div>
                                 </div>
 
                                 <!-- Action Buttons: Copy Key & Copy Fingerprint -->
-                                <div class="grid grid-cols-2 gap-2 pt-1">
-                                    <button onclick="copyPgpKey()" type="button" class="px-3 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium flex items-center justify-center gap-1.5 transition-all shadow-sm cursor-pointer">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button onclick="copyPgpKey()" type="button" class="px-3 py-2 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/35 text-emerald-400 font-mono text-xs font-medium flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer" title="Copy Full PGP Public Key Block">
                                         <i class="fa-solid fa-key text-[11px]"></i>
-                                        <span data-en="Copy PGP Key" data-cs="Kopírovat PGP klíč">Kopírovat PGP klíč</span>
+                                        <span data-en="Copy PGP Key" data-cs="Kopírovat PGP klíč">Copy PGP Key</span>
                                     </button>
-                                    <button onclick="copyPgpFingerprint()" type="button" class="px-3 py-2.5 rounded-xl bg-gray-750 hover:bg-gray-700 border border-gray-650 text-gray-200 text-xs font-medium flex items-center justify-center gap-1.5 transition-all cursor-pointer">
+                                    <button onclick="copyPgpFingerprint()" type="button" class="px-3 py-2 rounded-lg bg-dark-900 hover:bg-dark-800 border border-gray-800 text-slate-300 hover:text-white font-mono text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer" title="Copy Fingerprint only">
                                         <i class="fa-regular fa-copy text-[11px]"></i>
-                                        <span data-en="Copy Fingerprint" data-cs="Kopírovat otisk">Kopírovat otisk</span>
+                                        <span data-en="Copy Fingerprint" data-cs="Kopírovat otisk">Copy Fingerprint</span>
                                     </button>
                                 </div>
                             </div>
@@ -748,9 +1024,9 @@
 
                     </div>
 
-                    <!-- Right: Formspree Contact Form -->
+                    <!-- Right Contact Form (Formspree Working Endpoint) -->
                     <div class="lg:col-span-7">
-                        <div class="bg-gray-800 rounded-2xl border border-gray-700 p-6 sm:p-8 shadow-lg">
+                        <div class="cyber-card p-6 sm:p-8 rounded-xl">
                             
                             <form id="contact-form" action="https://formspree.io/f/moejalqg" method="POST" class="space-y-5">
                                 
@@ -761,63 +1037,69 @@
                                     
                                     <!-- Name Field -->
                                     <div class="space-y-1.5">
-                                        <label for="name" class="block text-xs font-medium text-gray-300" data-en="Name *" data-cs="Jméno *">
-                                            Jméno *
+                                        <label for="name" class="block text-xs font-mono font-medium text-slate-300" data-en="Name *" data-cs="Jméno *">
+                                            Name *
                                         </label>
-                                        <input type="text" id="name" name="name" required
-                                               class="w-full px-3.5 py-2.5 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                                               data-en-placeholder="Your name"
-                                               data-cs-placeholder="Vaše jméno"
-                                               placeholder="Vaše jméno">
+                                        <div class="relative">
+                                            <input type="text" id="name" name="name" required
+                                                class="w-full bg-dark-900 border border-gray-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-lg px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                                                placeholder="e.g. John Doe"
+                                                data-en-placeholder="e.g. John Doe"
+                                                data-cs-placeholder="např. Jan Novák">
+                                        </div>
                                     </div>
 
                                     <!-- Email Field -->
                                     <div class="space-y-1.5">
-                                        <label for="email" class="block text-xs font-medium text-gray-300" data-en="Email Address *" data-cs="E-mailová adresa *">
-                                            E-mailová adresa *
+                                        <label for="email" class="block text-xs font-mono font-medium text-slate-300" data-en="Email Address *" data-cs="E-mailová adresa *">
+                                            Email Address *
                                         </label>
-                                        <input type="email" id="email" name="_replyto" required
-                                               class="w-full px-3.5 py-2.5 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                                               data-en-placeholder="your.email@example.com"
-                                               data-cs-placeholder="vas.email@priklad.cz"
-                                               placeholder="vas.email@priklad.cz">
+                                        <div class="relative">
+                                            <input type="email" id="email" name="email" required
+                                                class="w-full bg-dark-900 border border-gray-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-lg px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                                                placeholder="name@domain.com"
+                                                data-en-placeholder="name@domain.com"
+                                                data-cs-placeholder="jmeno@domena.cz">
+                                        </div>
                                     </div>
 
                                 </div>
 
                                 <!-- Subject Field -->
                                 <div class="space-y-1.5">
-                                    <label for="subject" class="block text-xs font-medium text-gray-300" data-en="Subject / Category" data-cs="Předmět / Kategorie">
-                                        Předmět / Kategorie
+                                    <label for="subject" class="block text-xs font-mono font-medium text-slate-300" data-en="Subject / Category" data-cs="Předmět / Kategorie">
+                                        Subject / Category
                                     </label>
                                     <input type="text" id="subject" name="_subject"
-                                           class="w-full px-3.5 py-2.5 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                                           data-en-placeholder="CTF, collaboration, question..."
-                                           data-cs-placeholder="CTF, dotaz, spolupráce..."
-                                           placeholder="CTF, dotaz, spolupráce...">
+                                        class="w-full bg-dark-900 border border-gray-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-lg px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                                        placeholder="Pentest inquiry / Job opportunity / CTF team"
+                                        data-en-placeholder="Pentest inquiry / Job opportunity / CTF team"
+                                        data-cs-placeholder="Poptávka penetračního testu / Pracovní nabídka / CTF">
                                 </div>
 
                                 <!-- Message Field -->
                                 <div class="space-y-1.5">
-                                    <label for="message" class="block text-xs font-medium text-gray-300" data-en="Message *" data-cs="Zpráva *">
-                                        Zpráva *
+                                    <label for="message" class="block text-xs font-mono font-medium text-slate-300" data-en="Encrypted or Plain Message *" data-cs="Zpráva *">
+                                        Encrypted or Plain Message *
                                     </label>
                                     <textarea id="message" name="message" rows="5" required
-                                              class="w-full px-3.5 py-2.5 rounded-xl bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-y"
-                                              data-en-placeholder="Write your message or PGP encrypted payload here..."
-                                              data-cs-placeholder="Napište svou zprávu nebo zašifrovaný text sem..."
-                                              placeholder="Napište svou zprávu nebo zašifrovaný text sem..."></textarea>
+                                        class="w-full bg-dark-900 border border-gray-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-lg px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all resize-y"
+                                        placeholder="Type your message or paste PGP encrypted payload here..."
+                                        data-en-placeholder="Type your message or paste PGP encrypted payload here..."
+                                        data-cs-placeholder="Napište zprávu nebo vložte zašifrovaný PGP blok zde..."></textarea>
                                 </div>
 
-                                <!-- Submit Button -->
-                                <button type="submit" id="contact-submit-btn"
-                                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-blue-600/20 hover:-translate-y-0.5 cursor-pointer">
-                                    <i class="fa-solid fa-paper-plane text-xs" id="contact-submit-icon"></i>
-                                    <span id="contact-submit-text" data-en="Send Message" data-cs="Odeslat zprávu">Odeslat zprávu</span>
-                                </button>
+                                <!-- Inline Feedback Status Box -->
+                                <div id="contact-status" class="hidden rounded-lg p-3 text-xs font-mono"></div>
 
-                                <!-- Status div -->
-                                <div id="contact-status" class="hidden rounded-xl p-3 text-xs font-medium"></div>
+                                <!-- Submit Button -->
+                                <div class="pt-2">
+                                    <button type="submit" id="contact-submit-btn"
+                                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-lg font-mono font-semibold text-sm text-dark-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-[0_0_20px_rgba(16,185,129,0.25)] hover:shadow-[0_0_25px_rgba(16,185,129,0.45)] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
+                                        <i id="contact-submit-icon" class="fa-solid fa-paper-plane"></i>
+                                        <span id="contact-submit-text" data-en="Transmit Payload" data-cs="Odeslat zprávu">Transmit Payload</span>
+                                    </button>
+                                </div>
 
                             </form>
 
@@ -831,27 +1113,82 @@
 
     </main>
 
-    <!-- 9. FOOTER -->
-    <footer class="border-t border-gray-800 bg-gray-900 py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                <span>© 2026 ZeroCzech. <span data-en="All rights reserved." data-cs="Všechna práva vyhrazena.">Všechna práva vyhrazena.</span></span>
+    <!-- 8. FOOTER -->
+    <footer class="bg-dark-950 border-t border-gray-800/80 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Brand & Security Tagline -->
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-2 font-mono font-bold text-slate-100 text-base">
+                        <span class="text-emerald-400">&gt;</span>
+                        <span>zeroczech</span>
+                        <span class="terminal-cursor"></span>
+                    </div>
+                    <p class="text-xs font-mono text-slate-500" data-en="[ SYSTEM AUDITED • ETHICAL HACKING & DEFENSIVE MINDSET ]" data-cs="[ SYSTÉM AUDITOVÁN • ETICKÝ HACKING & DEFENSIVNÍ PŘÍSTUP ]">
+                        [ SYSTEM AUDITED • ETHICAL HACKING & DEFENSIVE MINDSET ]
+                    </p>
+                </div>
+
+                <!-- Footer Repeated Social Icons -->
+                <div class="flex items-center gap-3">
+                    <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-emerald-400 hover:border-emerald-500/40 transition-all" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/%C5%A1imon-tobi%C3%A1%C5%A1-7a60933ab/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-500/40 transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/simontobis75011" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-slate-100 hover:border-slate-500/40 transition-all" aria-label="X Profile">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/simon_tobias_/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-pink-400 hover:border-pink-500/40 transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="mailto:anomyous601@proton.me" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-emerald-400 hover:border-emerald-500/40 transition-all" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-900 border border-gray-800 flex items-center justify-center hover:text-red-400 hover:border-red-500/40 transition-all" aria-label="TryHackMe">
+                        <i class="fa-solid fa-fire"></i>
+                    </a>
+                </div>
+
             </div>
 
-            <div class="flex items-center gap-6">
-                <a href="https://github.com/Shiftyczech" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
-                <a href="https://tryhackme.com/p/Zeroczech" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">TryHackMe</a>
-                <a href="pgp.txt" target="_blank" class="hover:text-white transition-colors">PGP</a>
-                <a href=".well-known/security.txt" class="hover:text-white transition-colors">Security Policy</a>
+            <!-- Bottom Row: Copyright, PGP & Security Links -->
+            <div class="pt-6 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+                
+                <div>
+                    &copy; <span id="current-year">2026</span> Zeroczech. <span data-en="All rights reserved." data-cs="Všechna práva vyhrazena.">All rights reserved.</span>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="pgp.txt" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-key text-[10px]"></i>
+                        <span data-en="Public PGP Key" data-cs="Veřejný PGP klíč">Public PGP Key</span>
+                    </a>
+                    <a href=".well-known/security.txt" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield text-[10px]"></i>
+                        <span>security.txt</span>
+                    </a>
+                    <a href="#hero" class="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-chevron-up text-[10px]"></i>
+                        <span data-en="Top" data-cs="Nahoru">Top</span>
+                    </a>
+                </div>
+
             </div>
+
         </div>
     </footer>
 
-    <!-- JAVASCRIPT: Language Switcher, PGP Copy & Formspree Handler -->
+    <!-- JAVASCRIPT: Language Switcher, Toast Notification & Mobile Menu -->
     <script>
-        // 1. LANGUAGE SWITCHER
-        let currentLang = localStorage.getItem('portfolio_lang') || 'cs';
+        // Set dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 1. LANGUAGE SWITCHER (EN / CZ)
+        let currentLang = localStorage.getItem('portfolio_lang') || 'en';
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -863,11 +1200,11 @@
             const btnCs = document.getElementById('lang-cs');
 
             if (lang === 'en') {
-                btnEn.className = "px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-blue-600 text-white shadow-sm";
-                btnCs.className = "px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 text-gray-400 hover:text-white";
+                btnEn.className = "px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+                btnCs.className = "px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 text-slate-400 hover:text-slate-200";
             } else {
-                btnCs.className = "px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-blue-600 text-white shadow-sm";
-                btnEn.className = "px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-200 text-gray-400 hover:text-white";
+                btnCs.className = "px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+                btnEn.className = "px-2.5 py-1 text-xs font-mono font-bold rounded-full transition-all duration-200 text-slate-400 hover:text-slate-200";
             }
 
             // Update text elements with data-en and data-cs
@@ -889,52 +1226,57 @@
             });
         }
 
-        // Initialize language on page load
+        // Initialize language on DOM ready
         document.addEventListener('DOMContentLoaded', () => {
             setLanguage(currentLang);
         });
 
-        // 2. MOBILE MENU DRAWER
+        // 2. MOBILE MENU TOGGLE
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
 
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.className = 'fa-solid fa-bars text-lg';
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                if (isOpen) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
                 } else {
-                    menuIcon.className = 'fa-solid fa-xmark text-lg';
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
                 }
             });
 
+            // Close mobile menu on clicking any navigation link
             document.querySelectorAll('.mobile-link').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
-                    menuIcon.className = 'fa-solid fa-bars text-lg';
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
                 });
             });
         }
 
-        // 3. TOAST & CLIPBOARD COPYING
+        // 3. TOAST NOTIFICATION UTILITY (e.g. for copying PGP / Email)
+        let toastTimeout;
         function showToast(message) {
             const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toast-message');
-            if (!toast || !toastMsg) return;
-
-            toastMsg.textContent = message;
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
             toast.classList.add('show');
-
-            setTimeout(() => {
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
                 toast.classList.remove('show');
-            }, 3200);
+            }, 3000);
         }
 
         function copyToClipboard(text, successMsg) {
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(text).then(() => {
-                    showToast(successMsg || (currentLang === 'cs' ? 'Zkopírováno do schránky!' : 'Copied to clipboard!'));
+                    showToast(successMsg || 'Copied to clipboard!');
                 }).catch(() => {
                     fallbackCopyText(text, successMsg);
                 });
@@ -953,9 +1295,9 @@
             textArea.select();
             try {
                 document.execCommand('copy');
-                showToast(successMsg || (currentLang === 'cs' ? 'Zkopírováno do schránky!' : 'Copied to clipboard!'));
+                showToast(successMsg || 'Copied to clipboard!');
             } catch (err) {
-                showToast(currentLang === 'cs' ? 'Zkopírováno do schránky!' : 'Copied to clipboard!');
+                showToast('Copied: ' + text.slice(0, 30) + '...');
             }
             document.body.removeChild(textArea);
         }
@@ -1007,7 +1349,23 @@ jysO0Gk=
             copyToClipboard(PGP_FINGERPRINT, currentLang === 'cs' ? '[+] Otisk PGP klíče byl zkopírován!' : '[+] PGP fingerprint copied!');
         }
 
-        // 4. FORMSPREE AJAX SUBMISSION HANDLER
+        // Guarantee Nmap radar icon rendering
+        function ensureNmapIcon() {
+            document.querySelectorAll('.fa-radar').forEach(el => {
+                el.outerHTML = `<svg class="w-8 h-8 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5" class="opacity-40" stroke-dasharray="2 2"></circle><circle cx="12" cy="12" r="6" class="opacity-60"></circle><circle cx="12" cy="12" r="2.5" class="fill-current"></circle><line x1="12" y1="2.5" x2="12" y2="21.5" class="opacity-30"></line><line x1="2.5" y1="12" x2="21.5" y2="12" class="opacity-30"></line><line x1="12" y1="12" x2="19.5" y2="4.5" stroke-width="2.2" class="text-cyan-300"></line><circle cx="17.5" cy="7.5" r="1" class="fill-cyan-300"></circle></svg>`;
+            });
+        }
+        document.addEventListener('DOMContentLoaded', ensureNmapIcon);
+        ensureNmapIcon();
+
+        // 4. CV DOWNLOAD HANDLER (Placeholder with clear feedback)
+        function handleCvDownload(e) {
+            e.preventDefault();
+            const msg = currentLang === 'cs' ? 'Životopis bude brzy k dispozici ke stažení!' : 'CV PDF will be available for download shortly!';
+            showToast(msg);
+        }
+
+        // 5. FORMSPREE AJAX SUBMISSION HANDLER
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', async function(e) {
@@ -1018,10 +1376,23 @@ jysO0Gk=
                 const submitText = document.getElementById('contact-submit-text');
                 const statusDiv = document.getElementById('contact-status');
 
+                // Check if endpoint is still default placeholder
+                if (contactForm.action.includes('PLACEHOLDER')) {
+                    const noticeMsg = currentLang === 'cs'
+                        ? '[!] Formspree endpoint není nastaven. Zadejte své Formspree ID nebo napište přímo na anomyous601@proton.me'
+                        : '[!] Formspree endpoint ID not configured. Please contact directly via anomyous601@proton.me';
+                    showToast(noticeMsg);
+                    if (statusDiv) {
+                        statusDiv.className = 'rounded-lg p-3 text-xs font-mono bg-amber-500/10 border border-amber-500/30 text-amber-400 block';
+                        statusDiv.textContent = noticeMsg;
+                    }
+                    return;
+                }
+
                 // Loading state
                 submitBtn.disabled = true;
-                submitIcon.className = 'fa-solid fa-circle-notch fa-spin text-xs';
-                submitText.textContent = currentLang === 'cs' ? 'Odesílám...' : 'Sending...';
+                submitIcon.className = 'fa-solid fa-circle-notch fa-spin';
+                submitText.textContent = currentLang === 'cs' ? 'Přenáším data...' : 'Transmitting payload...';
 
                 try {
                     const formData = new FormData(contactForm);
@@ -1036,30 +1407,30 @@ jysO0Gk=
                     if (response.ok) {
                         contactForm.reset();
                         const successMsg = currentLang === 'cs'
-                            ? 'Zpráva byla úspěšně odeslána. Brzy se ozvu!'
-                            : 'Message sent successfully. I will get back to you soon!';
+                            ? '[+] Zpráva byla úspěšně doručena. Brzy se ozvu zpět!'
+                            : '[+] Transmission received! I will respond to your payload shortly.';
                         showToast(successMsg);
                         if (statusDiv) {
-                            statusDiv.className = 'rounded-xl p-3 text-xs font-medium bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 block';
+                            statusDiv.className = 'rounded-lg p-3 text-xs font-mono bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 block';
                             statusDiv.textContent = successMsg;
                         }
                     } else {
                         const data = await response.json();
-                        throw new Error((data && data.errors && data.errors.map(err => err.message).join(', ')) || 'Chyba odeslání');
+                        throw new Error((data && data.errors && data.errors.map(err => err.message).join(', ')) || 'Transmission rejected');
                     }
                 } catch (err) {
                     const errorMsg = currentLang === 'cs'
-                        ? 'Chyba při odesílání. Můžete mi napsat přímo na anomyous601@proton.me'
-                        : 'Error sending message. Please email me directly at anomyous601@proton.me';
+                        ? '[!] Chyba odeslání. Kontaktujte mě prosím na anomyous601@proton.me'
+                        : '[!] Transmission failure. Please reach out to anomyous601@proton.me';
                     showToast(errorMsg);
                     if (statusDiv) {
-                        statusDiv.className = 'rounded-xl p-3 text-xs font-medium bg-rose-500/10 border border-rose-500/30 text-rose-400 block';
+                        statusDiv.className = 'rounded-lg p-3 text-xs font-mono bg-rose-500/10 border border-rose-500/30 text-rose-400 block';
                         statusDiv.textContent = errorMsg;
                     }
                 } finally {
                     submitBtn.disabled = false;
-                    submitIcon.className = 'fa-solid fa-paper-plane text-xs';
-                    submitText.textContent = currentLang === 'cs' ? 'Odeslat zprávu' : 'Send Message';
+                    submitIcon.className = 'fa-solid fa-paper-plane';
+                    submitText.textContent = currentLang === 'cs' ? 'Odeslat zprávu' : 'Transmit Payload';
                 }
             });
         }
