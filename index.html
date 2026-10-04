@@ -450,8 +450,16 @@
 
                     <!-- Tool 4: Nmap -->
                     <div class="cyber-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
-                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-3 group-hover:scale-110 group-hover:text-cyan-300 transition-all">
-                            <i class="fa-solid fa-radar"></i>
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-3 group-hover:scale-110 group-hover:text-cyan-300 transition-all">
+                            <svg class="w-8 h-8 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9.5" class="opacity-40" stroke-dasharray="2 2"></circle>
+                                <circle cx="12" cy="12" r="6" class="opacity-60"></circle>
+                                <circle cx="12" cy="12" r="2.5" class="fill-current"></circle>
+                                <line x1="12" y1="2.5" x2="12" y2="21.5" class="opacity-30"></line>
+                                <line x1="2.5" y1="12" x2="21.5" y2="12" class="opacity-30"></line>
+                                <line x1="12" y1="12" x2="19.5" y2="4.5" stroke-width="2.2" class="text-cyan-300"></line>
+                                <circle cx="17.5" cy="7.5" r="1" class="fill-cyan-300"></circle>
+                            </svg>
                         </div>
                         <h4 class="font-mono font-bold text-slate-100 text-base">Nmap</h4>
                         <span class="text-xs text-emerald-400 font-mono mt-1" data-en="Network Discovery" data-cs="Síťový průzkum">Network Discovery</span>
@@ -967,26 +975,47 @@
                                     </div>
                                     <div>
                                         <div class="text-xs font-mono text-slate-500 uppercase" data-en="Security Policy" data-cs="Bezpečnostní politika">Security Policy</div>
-                                        <a href="/.well-known/security.txt" class="text-emerald-400 hover:text-emerald-300 font-mono text-xs mt-0.5 inline-block underline">
+                                        <a href=".well-known/security.txt" class="text-emerald-400 hover:text-emerald-300 font-mono text-xs mt-0.5 inline-block underline">
                                             /.well-known/security.txt
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- PGP Fingerprint Box -->
-                            <div class="pt-4 border-t border-gray-800">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                            <!-- PGP Encryption Key & Fingerprint Box -->
+                            <div class="pt-4 border-t border-gray-800 space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-mono text-slate-300 font-semibold flex items-center gap-2">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                                         <i class="fa-solid fa-key text-emerald-400"></i>
-                                        <span data-en="PGP Fingerprint" data-cs="Otisk PGP klíče">PGP Fingerprint</span>
+                                        <span data-en="PGP Encryption Key" data-cs="Šifrovací PGP klíč">PGP Encryption Key</span>
                                     </span>
-                                    <a href="/pgp.txt" target="_blank" class="text-[11px] font-mono text-emerald-400 hover:underline" data-en="View Full Key" data-cs="Zobrazit celý klíč">View Full Key</a>
+                                    <a href="pgp.txt" target="_blank" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1 underline transition-colors" title="Download raw pgp.txt">
+                                        <i class="fa-solid fa-file-shield text-[11px]"></i>
+                                        <span>pgp.txt</span>
+                                    </a>
                                 </div>
-                                <div class="p-2.5 rounded bg-dark-900 border border-gray-800/80 font-mono text-[11px] text-slate-400 flex items-center justify-between">
-                                    <span class="truncate mr-2">4F9A 2B8C 1D3E 7F0A 9921 E40B C011 A8FE</span>
-                                    <button onclick="copyToClipboard('4F9A 2B8C 1D3E 7F0A 9921 E40B C011 A8FE', 'PGP Fingerprint copied!')" class="text-slate-400 hover:text-emerald-400 p-1" title="Copy Fingerprint">
-                                        <i class="fa-regular fa-copy"></i>
+
+                                <!-- Fingerprint Display -->
+                                <div class="p-2.5 rounded-lg bg-dark-900 border border-gray-800 font-mono text-[11px]">
+                                    <div class="text-[10px] text-slate-500 uppercase tracking-wider mb-1 flex items-center justify-between">
+                                        <span data-en="Fingerprint (RSA 2048)" data-cs="Otisk klíče (RSA 2048)">Fingerprint (RSA 2048)</span>
+                                        <span class="text-emerald-400/80 font-bold">ZeroCzech</span>
+                                    </div>
+                                    <div class="text-emerald-400 font-mono text-xs tracking-wider break-all select-all py-0.5">
+                                        F69F 5708 11EF C6F5 7065 D9DC 627E B362 A67B E0D0
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons: Copy Key & Copy Fingerprint -->
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button onclick="copyPgpKey()" type="button" class="px-3 py-2 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/35 text-emerald-400 font-mono text-xs font-medium flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer" title="Copy Full PGP Public Key Block">
+                                        <i class="fa-solid fa-key text-[11px]"></i>
+                                        <span data-en="Copy PGP Key" data-cs="Kopírovat PGP klíč">Copy PGP Key</span>
+                                    </button>
+                                    <button onclick="copyPgpFingerprint()" type="button" class="px-3 py-2 rounded-lg bg-dark-900 hover:bg-dark-800 border border-gray-800 text-slate-300 hover:text-white font-mono text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer" title="Copy Fingerprint only">
+                                        <i class="fa-regular fa-copy text-[11px]"></i>
+                                        <span data-en="Copy Fingerprint" data-cs="Kopírovat otisk">Copy Fingerprint</span>
                                     </button>
                                 </div>
                             </div>
@@ -1134,11 +1163,11 @@
                 </div>
 
                 <div class="flex items-center gap-6">
-                    <a href="/pgp.txt" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                    <a href="pgp.txt" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
                         <i class="fa-solid fa-key text-[10px]"></i>
                         <span data-en="Public PGP Key" data-cs="Veřejný PGP klíč">Public PGP Key</span>
                     </a>
-                    <a href="/.well-known/security.txt" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                    <a href=".well-known/security.txt" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
                         <i class="fa-solid fa-shield text-[10px]"></i>
                         <span>security.txt</span>
                     </a>
@@ -1245,12 +1274,89 @@
         }
 
         function copyToClipboard(text, successMsg) {
-            navigator.clipboard.writeText(text).then(() => {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(successMsg || 'Copied to clipboard!');
+                }).catch(() => {
+                    fallbackCopyText(text, successMsg);
+                });
+            } else {
+                fallbackCopyText(text, successMsg);
+            }
+        }
+
+        function fallbackCopyText(text, successMsg) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
                 showToast(successMsg || 'Copied to clipboard!');
-            }).catch(() => {
-                showToast('Copied: ' + text);
+            } catch (err) {
+                showToast('Copied: ' + text.slice(0, 30) + '...');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // PGP Key & Fingerprint Data (ZeroCzech)
+        const PGP_PUBLIC_KEY = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User ID:\tZeroCzech
+Comment: Valid from:\t7/6/26 6:17 PM
+Comment: Type:\t2,048-bit RSA (secret key available)
+Comment: Usage:\tSigning, Encryption, Certifying User IDs
+Comment: Fingerprint:\tF69F570811EFC6F57065D9DC627EB362A67BE0D0
+
+mQENBGpL1RUBCADI/tR2+uuwRG25iNGFAar0kvr+CPMqsfaEklN+PMRxIdh7ACc1
+XxcQaeffmSMi17SYhYvaP/owFPSBgeDaT01ZMGcCFXc8mvO/8m8ib8QHZxriEeoE
+acsE8O1Aw9CuOTtA2Jkuuhep6TXyMIqrHIN61/ypI1tFk/pKOne30VIXKTG0zFam
+nE67bYmwRbPCvIHkVNNqG6YqHsv/nM+9IecCsF761uRh/LwurSkoIuPC8YgWR7wv
+IpuydgoeNmhcPl0u2m9VoqgZ98073ybugUNU1auxzC0xjBy8qoLVfxQCL2hKMzJH
+6y7DPF3d5zad5WZF++WAnSdbIknTDSmVWubPABEBAAG0CVplcm9DemVjaIkBTgQT
+AQoAOBYhBPafVwgR78b1cGXZ3GJ+s2Kme+DQBQJqS9UVAhsDBQsJCAcCBhUKCQgL
+AgQWAgMBAh4BAheAAAoJEGJ+s2Kme+DQbnMH/1eJsZYE2yDw9Y9B2+ojut3GAUWq
+B4Df1SSfwbMPthjet3kJcUo630zfgmtz8dwJKHIHaxThI17p49EJeogn+iDKTd/+
+sWTuBvlLMYLN+l4zUrvyaTkgox+zFxwc+ia0u9GtaIgSpmkhsmJFa46SJQxNV8rZ
+2sH7CR+AqeL7sll7IPTrz5GVXctyk+PBaciEQ7YTu9Qv8Yrk9CHxddGMQB5Nyzv8
+U1B3xoz3wCmEokORJ0V07puQPTj4MWwzJj+aRTMd0klsqB+4yGoIcrMColeQvstp
+rHXebuzqc2QWGqjTfHjHKghotwPFRiJ+8luIQSTuHE0pvPM0zTKibgq6mK25AQ0E
+akvVFQEIANI9NsnkDSECfYhZ2XOp45/zc4BDALNyVC/O6Jted97cEu8CgzY3vuaq
+r+4fgqf21+aFMsrBHBm9fqKevSnxjAkmZFzV28WiOL2uE0Nd6Z2Oa0rOk3QOWP0I
+hdcBsb0T6MWlzVgPiRegmrZJYqXi+xNqx//9AmpVqUqDjffpft6tK4CdmMruAWLZ
+7Tifkmspjg1Mc/Qyf9JyolzX3Y+TBZYRzrQb9gAvRECjVLzdIaE01iZuzbM+xyLL
+JbbPMaYCNVRtmMorBkO0AJ+GrFHhUFx1nJopd3d+kvK0GQTpW/yOZLzwcU1+r90P
+cPDRSrWJ39mHGlH0nqrWfdrQQgxEQ5EAEQEAAYkBNgQYAQoAIBYhBPafVwgR78b1
+cGXZ3GJ+s2Kme+DQBQJqS9UVAhsMAAoJEGJ+s2Kme+DQfK8IAKpoXNyOMksuGrVJ
+1s8uKI+OTfudnSXD9zJ2CQST6R4rLKN/t5qO2IG8IWcy4kkAT4VLPwfuftjDBdv+
+kBp9ptBCeOZq8AcH118LKdEoBUo0+PUTFWqiY00koxfr1RF6RXdAigilIh1Xzetk
+3RM9yXuaIA23iymj2FfFMrZTTQETbclJ46CxpbeetgP63O1dcKrb0cn3gLFAxKTI
+rNaIhGvJ0DIAKI9QQHIX1BQLFKOLKBJCHBC91tBCmV/BZUxLX3EbRYWNScpSx4Do
+BvfBn1Z6VAE9g6bQej2AlA0MbXq6nWtt3nm08WkuctkSbQybgkpJjgNKTAT4Slo1
+jysO0Gk=
+=4oLU
+-----END PGP PUBLIC KEY BLOCK-----`;
+
+        const PGP_FINGERPRINT = 'F69F 5708 11EF C6F5 7065 D9DC 627E B362 A67B E0D0';
+
+        function copyPgpKey() {
+            copyToClipboard(PGP_PUBLIC_KEY, currentLang === 'cs' ? '[+] Veřejný PGP klíč byl zkopírován do schránky!' : '[+] PGP public key copied to clipboard!');
+        }
+
+        function copyPgpFingerprint() {
+            copyToClipboard(PGP_FINGERPRINT, currentLang === 'cs' ? '[+] Otisk PGP klíče byl zkopírován!' : '[+] PGP fingerprint copied!');
+        }
+
+        // Guarantee Nmap radar icon rendering
+        function ensureNmapIcon() {
+            document.querySelectorAll('.fa-radar').forEach(el => {
+                el.outerHTML = `<svg class="w-8 h-8 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5" class="opacity-40" stroke-dasharray="2 2"></circle><circle cx="12" cy="12" r="6" class="opacity-60"></circle><circle cx="12" cy="12" r="2.5" class="fill-current"></circle><line x1="12" y1="2.5" x2="12" y2="21.5" class="opacity-30"></line><line x1="2.5" y1="12" x2="21.5" y2="12" class="opacity-30"></line><line x1="12" y1="12" x2="19.5" y2="4.5" stroke-width="2.2" class="text-cyan-300"></line><circle cx="17.5" cy="7.5" r="1" class="fill-cyan-300"></circle></svg>`;
             });
         }
+        document.addEventListener('DOMContentLoaded', ensureNmapIcon);
+        ensureNmapIcon();
 
         // 4. CV DOWNLOAD HANDLER (Placeholder with clear feedback)
         function handleCvDownload(e) {

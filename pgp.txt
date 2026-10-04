@@ -1,9 +1,35 @@
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: Shiftyczech (Cybersecurity & Penetration Testing) <anomyous601@proton.me>
+Comment: User ID:	ZeroCzech
+Comment: Valid from:	7/6/26 6:17 PM
+Comment: Type:	2,048-bit RSA (secret key available)
+Comment: Usage:	Signing, Encryption, Certifying User IDs
+Comment: Fingerprint:	F69F570811EFC6F57065D9DC627EB362A67BE0D0
 
-mQGNBF+test+KEY+BLOCK+PLACEHOLDER+FOR+SHIFTYCZECH+PORTFOLIO+KEYAAA
-AQEA0+example+pgp+public+key+block+for+secure+communication+and+
-verification+purposes+only+replace+with+actual+gpg+export+asc+key+
-block+when+ready+to+deploy+in+production+environment+keyserver+id+
-=4F9A2B8C1D3E7F0A
+mQENBGpL1RUBCADI/tR2+uuwRG25iNGFAar0kvr+CPMqsfaEklN+PMRxIdh7ACc1
+XxcQaeffmSMi17SYhYvaP/owFPSBgeDaT01ZMGcCFXc8mvO/8m8ib8QHZxriEeoE
+acsE8O1Aw9CuOTtA2Jkuuhep6TXyMIqrHIN61/ypI1tFk/pKOne30VIXKTG0zFam
+nE67bYmwRbPCvIHkVNNqG6YqHsv/nM+9IecCsF761uRh/LwurSkoIuPC8YgWR7wv
+IpuydgoeNmhcPl0u2m9VoqgZ98073ybugUNU1auxzC0xjBy8qoLVfxQCL2hKMzJH
+6y7DPF3d5zad5WZF++WAnSdbIknTDSmVWubPABEBAAG0CVplcm9DemVjaIkBTgQT
+AQoAOBYhBPafVwgR78b1cGXZ3GJ+s2Kme+DQBQJqS9UVAhsDBQsJCAcCBhUKCQgL
+AgQWAgMBAh4BAheAAAoJEGJ+s2Kme+DQbnMH/1eJsZYE2yDw9Y9B2+ojut3GAUWq
+B4Df1SSfwbMPthjet3kJcUo630zfgmtz8dwJKHIHaxThI17p49EJeogn+iDKTd/+
+sWTuBvlLMYLN+l4zUrvyaTkgox+zFxwc+ia0u9GtaIgSpmkhsmJFa46SJQxNV8rZ
+2sH7CR+AqeL7sll7IPTrz5GVXctyk+PBaciEQ7YTu9Qv8Yrk9CHxddGMQB5Nyzv8
+U1B3xoz3wCmEokORJ0V07puQPTj4MWwzJj+aRTMd0klsqB+4yGoIcrMColeQvstp
+rHXebuzqc2QWGqjTfHjHKghotwPFRiJ+8luIQSTuHE0pvPM0zTKibgq6mK25AQ0E
+akvVFQEIANI9NsnkDSECfYhZ2XOp45/zc4BDALNyVC/O6Jted97cEu8CgzY3vuaq
+r+4fgqf21+aFMsrBHBm9fqKevSnxjAkmZFzV28WiOL2uE0Nd6Z2Oa0rOk3QOWP0I
+hdcBsb0T6MWlzVgPiRegmrZJYqXi+xNqx//9AmpVqUqDjffpft6tK4CdmMruAWLZ
+7Tifkmspjg1Mc/Qyf9JyolzX3Y+TBZYRzrQb9gAvRECjVLzdIaE01iZuzbM+xyLL
+JbbPMaYCNVRtmMorBkO0AJ+GrFHhUFx1nJopd3d+kvK0GQTpW/yOZLzwcU1+r90P
+cPDRSrWJ39mHGlH0nqrWfdrQQgxEQ5EAEQEAAYkBNgQYAQoAIBYhBPafVwgR78b1
+cGXZ3GJ+s2Kme+DQBQJqS9UVAhsMAAoJEGJ+s2Kme+DQfK8IAKpoXNyOMksuGrVJ
+1s8uKI+OTfudnSXD9zJ2CQST6R4rLKN/t5qO2IG8IWcy4kkAT4VLPwfuftjDBdv+
+kBp9ptBCeOZq8AcH118LKdEoBUo0+PUTFWqiY00koxfr1RF6RXdAigilIh1Xzetk
+3RM9yXuaIA23iymj2FfFMrZTTQETbclJ46CxpbeetgP63O1dcKrb0cn3gLFAxKTI
+rNaIhGvJ0DIAKI9QQHIX1BQLFKOLKBJCHBC91tBCmV/BZUxLX3EbRYWNScpSx4Do
+BvfBn1Z6VAE9g6bQej2AlA0MbXq6nWtt3nm08WkuctkSbQybgkpJjgNKTAT4Slo1
+jysO0Gk=
+=4oLU
 -----END PGP PUBLIC KEY BLOCK-----

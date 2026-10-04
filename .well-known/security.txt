@@ -1,5 +1,6 @@
 Contact: mailto:anomyous601@proton.me
-Encryption: https://shiftyczech.github.io/pgp.txt
+Encryption: https://shiftyczech.github.io/portfolio/pgp.txt
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en, cs
-Canonical: https://shiftyczech.github.io/.well-known/security.txt
+Canonical: https://shiftyczech.github.io/portfolio/.well-known/security.txt
+Policy: https://shiftyczech.github.io/portfolio/
